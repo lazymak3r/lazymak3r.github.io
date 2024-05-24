@@ -1,0 +1,20 @@
+@import "styles/variables";
+@import url('https://fonts.googleapis.com/css2?family=San+Francisco&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'San Francisco', sans-serif;
+}
+
+.app {
+  color: #fff;
+  min-height: 100vh;
+  background-color: #1f1f1f;
+}

@@ -1,0 +1,29 @@
+@import "src/styles/variables";
+
+@mixin border {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@mixin glass {
+    background: $glass;
+    backdrop-filter: blur(10px);
+}
+
+@mixin shadow {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+@mixin primary-gradient {
+    background-image: linear-gradient($primary, $danger);
+}
+
+@mixin primary-gradient-light {
+    background-image: linear-gradient($primary-light, $danger-light);
+}
+
+@mixin primary-gradient-dark {
+    background-image: linear-gradient($primary-dark, $danger-dark);
+}

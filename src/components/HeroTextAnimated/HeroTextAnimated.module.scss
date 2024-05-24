@@ -1,0 +1,62 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.textDynamic {
+  width: 100%;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 600;
+  display: inline-block;
+  color: $white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include primary-gradient
+}
+
+.letterDynamic {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(-100px) skewY(10deg) skewX(10deg) rotateZ(30deg);
+  animation: 6s;
+  display: inline-block;
+  animation-name: showHide;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.34, 0.65, 0.17, 1);
+  color: $white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include primary-gradient
+}
+
+@keyframes showHide {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-100px) skewY(10deg) skewX(10deg) rotateZ(30deg);
+  }
+  25% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) skewY(0) skewX(0) rotateZ(0);
+  }
+  75% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) skewY(0) skewX(0) rotateZ(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(100px) skewY(10deg) skewX(10deg) rotateZ(30deg);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .textDynamic{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+  }
+}
