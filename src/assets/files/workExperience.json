@@ -1,0 +1,130 @@
+[
+  {
+    "id": 6,
+    "title": "Freelance",
+    "startDate": "2022-06-01",
+    "endDate": "",
+    "profession": "Full-Stack Web Engineer",
+    "projects": [
+      {
+        "title": "Blockem",
+        "link": "https://www.blockem.io/"
+      },
+      {
+        "title": "Mamele",
+        "link": "https://mamele.com/"
+      },
+      {
+        "title": "Truckin Digital",
+        "link": "https://www.truckindigital.com"
+      },
+      {
+        "title": "SMP Bank",
+        "link": "https://smpbank.ru/home"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Iabsis SARL",
+    "startDate": "2022-02-01",
+    "endDate": "2022-06-01",
+    "profession": "Full-Stack Web Engineer (React, Next.js, Node.js, Nest.js)",
+    "projects": [
+      {
+        "title": "Airdrop",
+        "link": "https://airdrop.com/"
+      },
+      {
+        "title": "Alt.co",
+        "link": "https://alt.co/"
+      },
+      {
+        "title": "Sezame Wallet",
+        "link": "https://sezame.app/"
+      },
+      {
+        "title": "Sezame Wallet application",
+        "link": "https://apps.apple.com/us/app/sezame-wallet/id1618252953"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "MINNOVA.AM",
+    "startDate": "2020-06-01",
+    "endDate": "2022-02-01",
+    "profession": "React/React-Native Developer",
+    "projects": [
+      {
+        "title": "inKin application",
+        "link": "https://apps.apple.com/us/app/inkin-fitness-challenge/id1456256877"
+      },
+      {
+        "title": "inKin.health application"
+      },
+      {
+        "title": "https://app.inkin.com website",
+        "link": "https://app.inkin.com"
+      },
+      {
+        "title": "https://www.inkin.com website",
+        "link": "https://www.inkin.com"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Iguan Systems",
+    "startDate": "2019-04-01",
+    "endDate": "2020-06-01",
+    "profession": "Angular 2+ Developer",
+    "projects": [
+      {
+        "title": "Deout SPA"
+      },
+      {
+        "title": "Barder Art",
+        "link": "https://www.barder.art"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Aparg",
+    "startDate": "2018-01-01",
+    "endDate": "2019-04-01",
+    "profession": "Web Developer (ReactJS, Angular 2+)",
+    "projects": [
+      {
+        "title": "Cincopa.com website",
+        "link": "https://www.cincopa.com"
+      },
+      {
+        "title": "Cincopa Rectrace Chrome Extension",
+        "link": "https://chrome.google.com/webstore/detail/cincopa-rectrace/dgmoopeiaaembcbpngjcndibcejbhafg"
+      },
+      {
+        "title": "Shazoom Chrome Extension",
+        "link": "https://chrome.google.com/webstore/detail/shazoom-video-recorder-me/ahfgeclknnjfgbefcblahelikidbgehh"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "IT-Talents",
+    "startDate": "2017-01-01",
+    "endDate": "2018-01-01",
+    "profession": "Web Developer (JavaScript, ReactJS, HTML, CSS)",
+    "projects": [
+      {
+        "title": "Paris Tour Guide application",
+        "link": "https://play.google.com/store/apps/details?id=com.tour.paris&hl=en_US&gl=US"
+      },
+      {
+        "title": "IT-Talents website",
+        "link": "https://it-talents.org/am"
+      }
+    ]
+  }
+]

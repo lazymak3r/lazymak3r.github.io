@@ -1,0 +1,95 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.container {
+  overflow: hidden;
+}
+
+.listItem {
+  display: flex;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  @include shadow;
+}
+
+.leftSide {
+  width: 250px;
+  flex-shrink: 0
+}
+
+.rightSide {}
+
+.projects {}
+
+.title {
+  color: $white;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.date {
+  // color: $blue1;
+}
+
+.list {
+  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  font-size: 14px;
+  color: $white;
+  font-weight: 700;
+  padding: 8px 24px;
+  border-radius: 8px;
+  background-color: $black;
+  transition: 0.2s color, 0.2s background-color;
+}
+
+.hasLink {
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    // background-color: $blue2;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .leftSide {
+    width: 185px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .leftSide {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .listItem {
+    flex-direction: column;
+  }
+
+  .leftSide {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title {
+    flex-grow: 1;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .leftSide {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+}
