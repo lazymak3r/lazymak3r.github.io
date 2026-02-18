@@ -26,7 +26,7 @@ export function Footer() {
             <div className="section-container py-10">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     <div>
-                        <p className="font-display font-bold text-lg gradient-brand-text mb-1">LazyMak3R</p>
+                        <p className="font-display font-bold text-lg gradient-brand-text mb-1">Aram Suqiasyan</p>
                         <p className="text-text-muted text-sm">Full-Stack Software Engineer</p>
                     </div>
 
