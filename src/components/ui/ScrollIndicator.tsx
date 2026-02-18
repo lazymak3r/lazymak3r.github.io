@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion'
+
 import {IconChevronDown} from '../../assets/icons/IconChevronDown'
 
 export function ScrollIndicator() {

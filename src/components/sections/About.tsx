@@ -1,12 +1,13 @@
 import {motion} from 'framer-motion'
-import {SectionWrapper} from '../ui/SectionWrapper'
-import {ArrowRight} from '../../assets/icons/ArrowRight'
+
 import lazyImg from '../../assets/images/lazy.jpg'
 import trakioImg from '../../assets/images/trakio.png'
 import localingoImg from '../../assets/images/localingo.png'
 import musicdropImg from '../../assets/images/musicdrop.png'
 import appStoreBadge from '../../assets/images/download_on_the_app_store.svg'
 import playStoreBadge from '../../assets/images/get_It_on_google_play.svg'
+import {ArrowRight} from '../../assets/icons/ArrowRight'
+import {SectionWrapper} from '../ui/SectionWrapper'
 
 const highlights = [
     {icon: '⚡', label: 'Build app from MVP to launch'},
@@ -29,7 +30,7 @@ const myApps = [
     {
         name: 'Localingo',
         tagline: 'Local Translation',
-        description: 'Offline-first translator with peer-to-peer chat powered by on-device ML. Communicate in any language — no Wi-Fi or mobile data required.',
+        description: 'Offline-first translator with peer-to-peer chat powered by on-device ML. Communicate in any language - no Wi-Fi or mobile data required.',
         icon: localingoImg,
         iconBg: null,
         appStore: 'https://apps.apple.com/us/app/localingo-local-translation/id6754503625',
@@ -38,7 +39,7 @@ const myApps = [
     {
         name: 'MusicDrop',
         tagline: 'Offline Music Player',
-        description: 'Take control of your music library with offline playback, background playing, and high-quality audio — your music, always available, wherever you are.',
+        description: 'Take control of your music library with offline playback, background playing, and high-quality audio - your music, always available, wherever you are.',
         icon: musicdropImg,
         iconBg: null,
         appStore: 'https://apps.apple.com/us/app/musicdrop-music-playlists/id6705131153',

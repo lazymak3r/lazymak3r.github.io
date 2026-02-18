@@ -97,7 +97,7 @@ export function Hero() {
                             className="text-text-secondary text-lg leading-relaxed mb-10"
                         >
                             I'm <span className="text-text-primary font-medium">Aram Suqiasyan</span>, a full-stack
-                            engineer with 7+ years crafting high-performance web and mobile experiences with React,
+                            software engineer with 7+ years crafting high-performance web and mobile experiences with React,
                             Node.js, and TypeScript.
                         </motion.p>
 

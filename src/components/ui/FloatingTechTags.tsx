@@ -1,6 +1,6 @@
 import {useRef} from 'react'
-import {Canvas, useFrame, useThree} from '@react-three/fiber'
 import {Text3D, Center} from '@react-three/drei'
+import {Canvas, useFrame, useThree} from '@react-three/fiber'
 import helvetikerBold from 'three/examples/fonts/helvetiker_bold.typeface.json'
 import type {Group} from 'three'
 
@@ -61,7 +61,7 @@ function FloatingTag({label, xFrac, yFrac, z, phase, speed, rxS, ryS, rzS, vw, v
         <group ref={ref} position={[baseX, baseY, z]}>
             <Center>
                 <Text3D
-                    font={helvetikerBold as any}
+                    font={helvetikerBold as unknown as string}
                     size={0.17}
                     height={0.04}
                     curveSegments={4}
