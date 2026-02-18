@@ -4,6 +4,7 @@ import {ArrowRight} from '../../assets/icons/ArrowRight'
 import lazyImg from '../../assets/images/lazy.jpg'
 import trakioImg from '../../assets/images/trakio.png'
 import localingoImg from '../../assets/images/localingo.png'
+import musicdropImg from '../../assets/images/musicdrop.png'
 import appStoreBadge from '../../assets/images/download_on_the_app_store.svg'
 import playStoreBadge from '../../assets/images/get_It_on_google_play.svg'
 
@@ -32,6 +33,15 @@ const myApps = [
         icon: localingoImg,
         iconBg: null,
         appStore: 'https://apps.apple.com/us/app/localingo-local-translation/id6754503625',
+        playStore: '#',
+    },
+    {
+        name: 'MusicDrop',
+        tagline: 'Offline Music Player',
+        description: 'Take control of your music library with offline playback, background playing, and high-quality audio — your music, always available, wherever you are.',
+        icon: musicdropImg,
+        iconBg: null,
+        appStore: 'https://apps.apple.com/us/app/musicdrop-music-playlists/id6705131153',
         playStore: '#',
     },
 ]
@@ -202,10 +212,11 @@ export function About() {
                                             href={app.appStore}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            whileHover={{scale: 1.06, y: -2}}
+                                            whileHover={{scale: 1.06}}
                                             whileTap={{scale: 0.97}}
                                             transition={{type: 'spring', stiffness: 400, damping: 20}}
                                             className="inline-block"
+                                            style={{transformOrigin: 'center'}}
                                         >
                                             <img src={appStoreBadge} alt="Download on the App Store" className="h-9"/>
                                         </motion.a>
@@ -214,10 +225,11 @@ export function About() {
                                                 href={app.playStore}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                whileHover={{scale: 1.06, y: -2}}
+                                                whileHover={{scale: 1.06}}
                                                 whileTap={{scale: 0.97}}
                                                 transition={{type: 'spring', stiffness: 400, damping: 20}}
                                                 className="inline-block"
+                                                style={{transformOrigin: 'center'}}
                                             >
                                                 <img src={playStoreBadge} alt="Get it on Google Play" className="h-9"/>
                                             </motion.a>
