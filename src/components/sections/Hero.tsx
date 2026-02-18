@@ -50,16 +50,10 @@ export function Hero() {
                 style={{background: 'var(--color-brand-cyan)'}}
             />
 
-            <Suspense fallback={null}>
-                <FloatingTechTags/>
-            </Suspense>
-
-            {renderCanvas && !isDesktop && (
-                <div className="absolute inset-0" style={{zIndex: 1}}>
-                    <Suspense fallback={null}>
-                        <HeroScene mousePos={mousePos}/>
-                    </Suspense>
-                </div>
+            {isDesktop && (
+                <Suspense fallback={null}>
+                    <FloatingTechTags/>
+                </Suspense>
             )}
 
             <div
