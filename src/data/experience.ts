@@ -22,11 +22,12 @@ export const experiences: Experience[] = [
     period: '2024 - Present',
     type: 'full-time',
     description:
-      'Built and shipped two independent mobile apps to the App Store. Trakio is a beautifully simple finance tracker for personal and business use. Localingo is an offline-first translator with peer-to-peer chat powered by on-device ML - no Wi-Fi or mobile data required.',
+      'Built and shipped three independent mobile apps to the App Store. Trakio is a beautifully simple finance tracker. Localingo is an offline-first translator with peer-to-peer chat powered on-device ML. MusicDrop is an offline music player with background playback and library management.',
     technologies: ['React Native', 'TypeScript', 'Zustand', 'SQLite', 'React Navigation', 'i18next', 'IAP'],
     projects: [
       { name: 'Trakio', url: 'https://apps.apple.com/us/app/trakio/id6748575726' },
       { name: 'Localingo', url: 'https://apps.apple.com/us/app/localingo-local-translation/id6754503625' },
+      { name: 'MusicDrop', url: 'https://apps.apple.com/us/app/musicdrop-music-playlists/id6705131153' },
     ],
   },
   {

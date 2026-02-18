@@ -34,7 +34,7 @@ export function Skills() {
                 initial={{ opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.55, delay: catIndex * 0.08, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
+                transition={{ duration: 0.35, delay: catIndex * 0.05, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
                 className="card-gradient-border"
               >
                 <div className="p-6 flex flex-col h-full">
@@ -65,8 +65,8 @@ export function Skills() {
                           opacity: 1,
                           scale: 1,
                           transition: {
-                            duration: 0.25,
-                            delay: catIndex * 0.06 + i * 0.03,
+                            duration: 0.18,
+                            delay: catIndex * 0.04 + i * 0.02,
                             ease: 'easeOut',
                           },
                         }}

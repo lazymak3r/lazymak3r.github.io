@@ -16,7 +16,7 @@ export function ProjectCard({ name, url, company, period, technologies }: Projec
     <motion.div
       variants={{
         hidden: { opacity: 0, scale: 0.92, y: 20 },
-        visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.45 } },
+        visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.3 } },
       }}
       whileHover={{ y: -6, transition: { type: 'spring', stiffness: 400, damping: 20 } }}
       className="group relative flex flex-col h-full"

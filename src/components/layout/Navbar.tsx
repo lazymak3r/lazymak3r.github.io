@@ -45,7 +45,7 @@ export function Navbar() {
         <motion.header
             initial={{y: -80, opacity: 0}}
             animate={{y: 0, opacity: 1}}
-            transition={{duration: 0.6, ease: [0.16, 1, 0.3, 1]}}
+            transition={{duration: 0.4, ease: [0.16, 1, 0.3, 1]}}
             style={{zIndex: 'var(--z-navbar)' as unknown as number}}
             className="fixed top-0 left-0 right-0 transition-all duration-300"
         >

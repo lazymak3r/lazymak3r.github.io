@@ -14,7 +14,7 @@ export function ExperienceItem({ item, index }: ExperienceItemProps) {
     <motion.div
       variants={{
         hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.32, ease: 'easeOut' } },
       }}
       className={`relative flex flex-col md:flex-row gap-6 md:gap-12 ${
         isEven ? 'md:flex-row' : 'md:flex-row-reverse'

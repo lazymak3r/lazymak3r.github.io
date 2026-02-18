@@ -64,7 +64,7 @@ export function About() {
                         initial={{opacity: 0, x: -50}}
                         whileInView={{opacity: 1, x: 0}}
                         viewport={{once: true, amount: 0.3}}
-                        transition={{duration: 0.7, ease: 'easeOut'}}
+                        transition={{duration: 0.45, ease: 'easeOut'}}
                         className="space-y-5"
                     >
                         <p className="text-text-secondary leading-relaxed">
@@ -114,7 +114,7 @@ export function About() {
                         initial={{opacity: 0, x: 50}}
                         whileInView={{opacity: 1, x: 0}}
                         viewport={{once: true, amount: 0.3}}
-                        transition={{duration: 0.7, ease: 'easeOut', delay: 0.15}}
+                        transition={{duration: 0.45, ease: 'easeOut', delay: 0.1}}
                         whileHover={{scale: 1.02, transition: {type: 'spring', stiffness: 300}}}
                         className="relative"
                     >
@@ -158,7 +158,7 @@ export function About() {
                     initial={{opacity: 0, y: 40}}
                     whileInView={{opacity: 1, y: 0}}
                     viewport={{once: true, amount: 0.15}}
-                    transition={{duration: 0.7, ease: 'easeOut'}}
+                    transition={{duration: 0.45, ease: 'easeOut'}}
                     className="mt-20"
                 >
                     <div className="mb-8">
@@ -177,7 +177,7 @@ export function About() {
                                 initial={{opacity: 0, y: 30}}
                                 whileInView={{opacity: 1, y: 0}}
                                 viewport={{once: true, amount: 0.2}}
-                                transition={{duration: 0.5, delay: i * 0.1, ease: 'easeOut'}}
+                                transition={{duration: 0.35, delay: i * 0.07, ease: 'easeOut'}}
                                 className="card-gradient-border"
                             >
                                 <div className="p-6 space-y-4 h-full flex flex-col">

@@ -66,7 +66,7 @@ export function Hero() {
                         <motion.div
                             initial={{opacity: 0, y: 20}}
                             animate={{opacity: 1, y: 0}}
-                            transition={{duration: 0.6, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.1}}
+                            transition={{duration: 0.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.05}}
                             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium mb-6"
                             style={{
                                 background: 'rgba(72,18,228,0.15)',
@@ -81,7 +81,7 @@ export function Hero() {
                         <motion.h1
                             initial={{opacity: 0, y: 40}}
                             animate={{opacity: 1, y: 0}}
-                            transition={{duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.2}}
+                            transition={{duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.12}}
                             className="font-display font-bold leading-tight text-text-primary mb-6"
                             style={{fontSize: 'clamp(2rem, 5vw, 4rem)'}}
                         >
@@ -93,7 +93,7 @@ export function Hero() {
                         <motion.p
                             initial={{opacity: 0, y: 30}}
                             animate={{opacity: 1, y: 0}}
-                            transition={{duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.35}}
+                            transition={{duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.22}}
                             className="text-text-secondary text-lg leading-relaxed mb-10"
                         >
                             I'm <span className="text-text-primary font-medium">Aram Suqiasyan</span>, a full-stack
@@ -104,7 +104,7 @@ export function Hero() {
                         <motion.div
                             initial={{opacity: 0, y: 20}}
                             animate={{opacity: 1, y: 0}}
-                            transition={{duration: 0.6, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.5}}
+                            transition={{duration: 0.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number], delay: 0.32}}
                             className="flex flex-wrap items-center gap-4"
                         >
                             <a
@@ -153,7 +153,7 @@ export function Hero() {
             <motion.div
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
-                transition={{delay: 1.2, duration: 0.6}}
+                transition={{delay: 0.8, duration: 0.4}}
                 className="relative flex justify-center pb-10"
                 style={{zIndex: 'var(--z-hero-content)' as unknown as number}}
             >
