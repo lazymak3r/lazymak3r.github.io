@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@import "./variables.css";
+
+@theme {
+  --color-bg-deep: #0a0812;
+  --color-bg-surface: #110e1f;
+  --color-bg-elevated: #1a1630;
+  --color-bg-card: #160d2a;
+
+  --color-brand-purple: #1d1193;
+  --color-brand-violet: #4812e4;
+  --color-brand-cyan: #1aaccc;
+  --color-brand-cyan-light: #22d3ee;
+  --color-accent-glow: #7c3aed;
+
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #475569;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+
+  --radius-card: 12px;
+  --radius-button: 8px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--color-bg-deep);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans), sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-violet);
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-cyan);
+}
+
+@layer utilities {
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-brand-text {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-container {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .section-padding {
+    padding-top: clamp(4rem, 8vw, 7rem);
+    padding-bottom: clamp(4rem, 8vw, 7rem);
+  }
+
+  .rounded-card {
+    border-radius: var(--radius-card);
+  }
+
+  .rounded-button {
+    border-radius: var(--radius-button);
+  }
+
+  .card-gradient-border {
+    background: var(--gradient-card-border);
+    padding: 1px;
+    border-radius: var(--radius-card);
+  }
+
+  .card-gradient-border > * {
+    background: var(--color-bg-card);
+    border-radius: calc(var(--radius-card) - 1px);
+  }
+}
+
+::selection {
+  background: rgba(72, 18, 228, 0.3);
+  color: var(--color-text-primary);
+}
