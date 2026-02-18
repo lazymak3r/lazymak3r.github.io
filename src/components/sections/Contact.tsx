@@ -43,7 +43,7 @@ export function Contact() {
             href="mailto:aramsuqiasyan20@gmail.com"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-button font-display font-semibold text-lg text-white transition-all duration-300 mb-12"
+            className="inline-flex items-center gap-3 px-5 py-3 sm:px-8 sm:py-4 rounded-button font-display font-semibold text-sm sm:text-lg text-white transition-all duration-300 mb-12"
             style={{
               background: 'var(--gradient-brand)',
               boxShadow: 'var(--shadow-glow-purple)',
