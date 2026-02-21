@@ -13,6 +13,8 @@ const allProjects = experiences.flatMap(exp =>
     exp.projects.map(p => ({
         name: p.name,
         url: p.url,
+        appStore: p.appStore,
+        playStore: p.playStore,
         company: exp.company,
         period: exp.period,
         technologies: exp.technologies,

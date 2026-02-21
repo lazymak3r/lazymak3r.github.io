@@ -25,7 +25,7 @@ const myApps = [
         icon: trakioImg,
         iconBg: null,
         appStore: 'https://apps.apple.com/us/app/trakio/id6748575726',
-        playStore: '#',
+        playStore: 'https://play.google.com/store/apps/details?id=com.trakio',
     },
     {
         name: 'Localingo',
@@ -34,7 +34,6 @@ const myApps = [
         icon: localingoImg,
         iconBg: null,
         appStore: 'https://apps.apple.com/us/app/localingo-local-translation/id6754503625',
-        playStore: '#',
     },
     {
         name: 'MusicDrop',
@@ -43,7 +42,6 @@ const myApps = [
         icon: musicdropImg,
         iconBg: null,
         appStore: 'https://apps.apple.com/us/app/musicdrop-music-playlists/id6705131153',
-        playStore: '#',
     },
 ]
 
@@ -209,19 +207,21 @@ export function About() {
                                     </p>
 
                                     <div className="flex flex-wrap gap-3 pt-1 mt-auto">
-                                        <motion.a
-                                            href={app.appStore}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            whileHover={{scale: 1.06}}
-                                            whileTap={{scale: 0.97}}
-                                            transition={{type: 'spring', stiffness: 400, damping: 20}}
-                                            className="inline-block"
-                                            style={{transformOrigin: 'center'}}
-                                        >
-                                            <img src={appStoreBadge} alt="Download on the App Store" className="h-9"/>
-                                        </motion.a>
-                                        {app.playStore !== '#' && (
+                                        {app.appStore && (
+                                            <motion.a
+                                                href={app.appStore}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                whileHover={{scale: 1.06}}
+                                                whileTap={{scale: 0.97}}
+                                                transition={{type: 'spring', stiffness: 400, damping: 20}}
+                                                className="inline-block"
+                                                style={{transformOrigin: 'center'}}
+                                            >
+                                                <img src={appStoreBadge} alt="Download on the App Store" className="h-9"/>
+                                            </motion.a>
+                                        )}
+                                        {app.playStore && (
                                             <motion.a
                                                 href={app.playStore}
                                                 target="_blank"

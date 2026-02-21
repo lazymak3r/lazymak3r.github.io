@@ -1,6 +1,8 @@
 export interface Project {
     name: string
-    url: string
+    url?: string
+    appStore?: string
+    playStore?: string
 }
 
 export interface Experience {
@@ -25,9 +27,9 @@ export const experiences: Experience[] = [
             'Built and shipped three independent mobile apps to the App Store. Trakio is a beautifully simple finance tracker. Localingo is an offline-first translator with peer-to-peer chat powered on-device ML. MusicDrop is an offline music player with background playback and library management.',
         technologies: ['React Native', 'TypeScript', 'Zustand', 'SQLite', 'React Navigation', 'i18next', 'IAP'],
         projects: [
-            {name: 'Trakio', url: 'https://apps.apple.com/us/app/trakio/id6748575726'},
-            {name: 'Localingo', url: 'https://apps.apple.com/us/app/localingo-local-translation/id6754503625'},
-            {name: 'MusicDrop', url: 'https://apps.apple.com/us/app/musicdrop-music-playlists/id6705131153'},
+            {name: 'Trakio', url: 'https://trakio-neon.vercel.app/', appStore: 'https://apps.apple.com/us/app/trakio/id6748575726', playStore: 'https://play.google.com/store/apps/details?id=com.trakio'},
+            {name: 'Localingo', appStore: 'https://apps.apple.com/us/app/localingo-local-translation/id6754503625'},
+            {name: 'MusicDrop', appStore: 'https://apps.apple.com/us/app/musicdrop-music-playlists/id6705131153'},
         ],
     },
     {
@@ -56,7 +58,7 @@ export const experiences: Experience[] = [
         projects: [
             {name: 'Airdrop.com', url: 'https://airdrop.com'},
             {name: 'Alt.co', url: 'https://alt.co'},
-            {name: 'Sezame Wallet', url: 'https://sezame.app'},
+            {name: 'Sezame Wallet', url: 'https://sezame.app', appStore: 'https://apps.apple.com/us/app/sezame-wallet/id1618252953', playStore: 'https://play.google.com/store/apps/details?id=org.maze2.sezamewallet&hl=en'},
             {name: 'Pollenn', url: 'https://pollenn.ch'},
             {name: 'Pollenn Admin', url: '#'},
             {name: 'Jmatch', url: '#'},
@@ -100,7 +102,7 @@ export const experiences: Experience[] = [
             'Led the frontend team building a global fitness and wellness platform. Owned the web and mobile apps from architecture to delivery, scaling the product to hundreds of thousands of users.',
         technologies: ['React', 'React Native', 'Redux', 'Stripe', 'TypeScript'],
         projects: [
-            {name: 'inKin Mobile App', url: 'https://apps.apple.com/us/app/inkin-fitness-challenge/id1456256877'},
+            {name: 'inKin Mobile App', url: 'https://www.inkin.com/', appStore: 'https://apps.apple.com/us/app/inkin-fitness-challenge/id1456256877', playStore: 'https://play.google.com/store/apps/details?id=am.minnova.inkin&hl=en'},
             {name: 'app.inkin.com', url: 'https://app.inkin.com'},
             {name: 'inkin.com', url: 'https://inkin.com'},
         ],
