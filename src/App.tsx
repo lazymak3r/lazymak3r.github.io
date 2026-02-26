@@ -5,6 +5,7 @@ import {Navbar} from './components/layout/Navbar'
 import {Footer} from './components/layout/Footer'
 import {Contact} from './components/sections/Contact'
 import {Projects} from './components/sections/Projects'
+import {Hackathons} from './components/sections/Hackathons'
 import {WorkExperience} from './components/sections/WorkExperience'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                 <About/>
                 <WorkExperience/>
                 <Projects/>
+                <Hackathons/>
                 <Skills/>
                 <Contact/>
             </main>
