@@ -7,6 +7,8 @@ import {Contact} from './components/sections/Contact'
 import {Projects} from './components/sections/Projects'
 import {Hackathons} from './components/sections/Hackathons'
 import {WorkExperience} from './components/sections/WorkExperience'
+import {SystemExpertise} from './components/sections/SystemExpertise'
+import {IgamingExpertise} from './components/sections/IgamingExpertise'
 
 function App() {
     return (
@@ -19,6 +21,8 @@ function App() {
                 <Projects/>
                 <Hackathons/>
                 <Skills/>
+                <IgamingExpertise/>
+                <SystemExpertise/>
                 <Contact/>
             </main>
             <Footer/>

@@ -9,6 +9,7 @@ const categoryMeta: Record<SkillCategory, { color: string; glow: string; label: 
     Backend: {color: '#4812e4', glow: 'rgba(72,18,228,0.45)', label: 'Backend'},
     'AI & Web3': {color: '#a855f7', glow: 'rgba(168,85,247,0.4)', label: 'AI & Web3'},
     Tooling: {color: '#10b981', glow: 'rgba(16,185,129,0.35)', label: 'Tooling'},
+    iGaming: {color: '#f59e0b', glow: 'rgba(245,158,11,0.35)', label: 'iGaming'},
 }
 
 export function Skills() {

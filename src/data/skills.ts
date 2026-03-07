@@ -1,4 +1,4 @@
-export type SkillCategory = 'Frontend' | 'Backend' | 'AI & Web3' | 'Tooling'
+export type SkillCategory = 'Frontend' | 'Backend' | 'AI & Web3' | 'Tooling' | 'iGaming'
 
 export interface Skill {
     id: number
@@ -58,6 +58,18 @@ export const skills: Skill[] = [
     {id: 46, name: 'Electron', category: 'Tooling'},
     {id: 47, name: 'Storybook', category: 'Tooling'},
     {id: 48, name: 'RegEx', category: 'Tooling'},
+
+    {id: 49, name: 'PixiJS', category: 'iGaming'},
+    {id: 50, name: 'Phaser.js', category: 'iGaming'},
+    {id: 51, name: 'GSAP', category: 'iGaming'},
+    {id: 52, name: 'Canvas API', category: 'iGaming'},
+    {id: 53, name: 'WebGL', category: 'iGaming'},
+    {id: 54, name: 'Game State Machines', category: 'iGaming'},
+    {id: 55, name: 'RNG / Provably Fair', category: 'iGaming'},
+    {id: 56, name: 'Redis Pub/Sub', category: 'iGaming'},
+    {id: 57, name: 'Kafka / NATS', category: 'iGaming'},
+    {id: 58, name: 'PAM Integration', category: 'iGaming'},
+    {id: 59, name: 'KYC / AML SDKs', category: 'iGaming'},
 ]
 
-export const skillCategories: SkillCategory[] = ['Frontend', 'Backend', 'AI & Web3', 'Tooling']
+export const skillCategories: SkillCategory[] = ['Frontend', 'Backend', 'AI & Web3', 'Tooling', 'iGaming']

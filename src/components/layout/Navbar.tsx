@@ -8,6 +8,8 @@ const navLinks = [
     {label: 'Projects', href: '#projects'},
     {label: 'Hackathons', href: '#hackathons'},
     {label: 'Skills', href: '#skills'},
+    {label: 'iGaming', href: '#igaming'},
+    {label: 'Expertise', href: '#system-expertise'},
     {label: 'Contact', href: '#contact'},
 ]
 
@@ -60,7 +62,7 @@ export function Navbar() {
                             Aram Suqiasyan
                         </a>
 
-                        <ul className="hidden md:flex items-center gap-8">
+                        <ul className="hidden lg:flex items-center gap-5">
                             {navLinks.map(link => (
                                 <li key={link.href}>
                                     <a
@@ -78,7 +80,7 @@ export function Navbar() {
                         </ul>
 
                         <button
-                            className="md:hidden flex flex-col gap-1.5 p-2"
+                            className="lg:hidden flex flex-col gap-1.5 p-2"
                             onClick={() => setMenuOpen(v => !v)}
                             aria-label="Toggle menu"
                         >
@@ -106,7 +108,7 @@ export function Navbar() {
                         animate={{height: 'auto', opacity: 1}}
                         exit={{height: 0, opacity: 0}}
                         transition={{duration: 0.3, ease: 'easeInOut'}}
-                        className="md:hidden overflow-hidden bg-bg-surface/95 backdrop-blur-md border-b border-white/5"
+                        className="lg:hidden overflow-hidden bg-bg-surface/95 backdrop-blur-md border-b border-white/5"
                     >
                         <ul className="section-container py-6 flex flex-col gap-5">
                             {navLinks.map(link => (
