@@ -31,7 +31,7 @@ export function SystemExpertise() {
             Deep Technical <span className="gradient-brand-text">Knowledge</span>
           </h2>
           <p className="mt-4 text-text-secondary text-sm max-w-xl mx-auto">
-            Critical backend domains in iGaming — from high-load infrastructure to compliance and real-time data
+            Critical backend domains in iGaming - from high-load infrastructure to compliance and real-time data
             pipelines.
           </p>
         </div>

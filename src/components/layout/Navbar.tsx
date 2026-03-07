@@ -10,6 +10,7 @@ const navLinks = [
     {label: 'Skills', href: '#skills'},
     {label: 'iGaming', href: '#igaming'},
     {label: 'Expertise', href: '#system-expertise'},
+    {label: 'Demo', href: '#demo'},
     {label: 'Contact', href: '#contact'},
 ]
 
