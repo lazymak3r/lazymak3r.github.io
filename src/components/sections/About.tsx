@@ -2,9 +2,11 @@ import {motion} from 'framer-motion'
 
 import lazyImg from '../../assets/images/lazy.jpg'
 import trakioImg from '../../assets/images/trakio.png'
+import melomanImg from '../../assets/images/meloman.png'
 import localingoImg from '../../assets/images/localingo.png'
 import musicdropImg from '../../assets/images/musicdrop.png'
 import appStoreBadge from '../../assets/images/download_on_the_app_store.svg'
+import telegramBadge from '../../assets/images/open_in_telegram.svg'
 import playStoreBadge from '../../assets/images/get_It_on_google_play.svg'
 import {ArrowRight} from '../../assets/icons/ArrowRight'
 import {SectionWrapper} from '../ui/SectionWrapper'
@@ -42,6 +44,14 @@ const myApps = [
         icon: musicdropImg,
         iconBg: null,
         appStore: 'https://apps.apple.com/us/app/musicdrop-music-playlists/id6705131153',
+    },
+    {
+        name: 'Meloman',
+        tagline: 'Music Quiz Challenge',
+        description: 'A music quiz Telegram Mini App. Test your knowledge across albums and artists in solo or team multiplayer mode, with a coin-based reward system and leaderboard.',
+        icon: melomanImg,
+        iconBg: null,
+        telegram: 'https://t.me/playmeloman_bot/meloman',
     },
 ]
 
@@ -233,6 +243,20 @@ export function About() {
                                                 style={{transformOrigin: 'center'}}
                                             >
                                                 <img src={playStoreBadge} alt="Get it on Google Play" className="h-9"/>
+                                            </motion.a>
+                                        )}
+                                        {app.telegram && (
+                                            <motion.a
+                                                href={app.telegram}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                whileHover={{scale: 1.06}}
+                                                whileTap={{scale: 0.97}}
+                                                transition={{type: 'spring', stiffness: 400, damping: 20}}
+                                                className="inline-block"
+                                                style={{transformOrigin: 'center'}}
+                                            >
+                                                <img src={telegramBadge} alt="Open in Telegram" className="h-9"/>
                                             </motion.a>
                                         )}
                                     </div>

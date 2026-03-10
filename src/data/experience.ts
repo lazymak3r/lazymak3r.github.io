@@ -24,12 +24,13 @@ export const experiences: Experience[] = [
         period: '2024 - Present',
         type: 'full-time',
         description:
-            'Built and shipped three independent mobile apps to the App Store. Trakio is a beautifully simple finance tracker. Localingo is an offline-first translator with peer-to-peer chat powered on-device ML. MusicDrop is an offline music player with background playback and library management.',
-        technologies: ['React Native', 'TypeScript', 'Zustand', 'SQLite', 'React Navigation', 'i18next', 'IAP'],
+            'Built and shipped independent mobile and Telegram apps. Trakio is a beautifully simple finance tracker. Localingo is an offline-first translator with peer-to-peer chat powered on-device ML. MusicDrop is an offline music player with background playback and library management. Meloman is a music quiz Telegram Mini App with solo and multiplayer modes.',
+        technologies: ['React Native', 'React', 'TypeScript', 'Zustand', 'SQLite', 'React Navigation', 'i18next', 'IAP', 'Telegram TWA'],
         projects: [
             {name: 'Trakio', url: 'https://trakio-neon.vercel.app/', appStore: 'https://apps.apple.com/us/app/trakio/id6748575726', playStore: 'https://play.google.com/store/apps/details?id=com.trakio'},
             {name: 'Localingo', appStore: 'https://apps.apple.com/us/app/localingo-local-translation/id6754503625'},
             {name: 'MusicDrop', appStore: 'https://apps.apple.com/us/app/musicdrop-music-playlists/id6705131153'},
+            {name: 'Meloman', url: 'https://t.me/playmeloman_bot/meloman'},
         ],
     },
     {
