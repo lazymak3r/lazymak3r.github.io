@@ -358,7 +358,7 @@ export function CrashGame() {
 
         drawIdle()
 
-        sndBeep.current = new Audio('/sounds/beep.mp3')
+        sndBeep.current = new Audio('/sounds/countdown.mp3')
         sndLoop.current = new Audio('/sounds/rising-tone-loop.mp3')
         sndLoop.current.loop = true
         sndLoop.current.volume = 0.5
