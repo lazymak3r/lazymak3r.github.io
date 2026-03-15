@@ -1,44 +1,50 @@
 :root {
-    --color-bg-deep: #0a0812;
-    --color-bg-surface: #110e1f;
-    --color-bg-elevated: #1a1630;
-    --color-bg-card: #160d2a;
+    --color-bg-deep:     #0a0a0a;
+    --color-bg-surface:  #111111;
+    --color-bg-elevated: #1a1a1a;
+    --color-bg-card:     #141414;
 
-    --color-brand-purple: #1d1193;
-    --color-brand-violet: #4812e4;
-    --color-brand-cyan: #1aaccc;
-    --color-brand-cyan-light: #22d3ee;
-    --color-accent-glow: #7c3aed;
+    --color-brand:       #a179f1;
+    --color-brand-vivid: #8b5cf6;
+    --color-brand-soft:  #c4b5fd;
+    --color-brand-faint: #ede9fe;
+    --color-brand-deep:  #5b21b6;
 
-    --color-text-primary: #f8fafc;
+    --color-brand-vivid-a10: rgba(139,92,246,0.1);
+    --color-brand-vivid-a15: rgba(139,92,246,0.15);
+    --color-brand-vivid-a40: rgba(139,92,246,0.4);
+    --color-brand-icon-bg:   rgba(139,92,246,0.08);
+    --color-brand-icon-border: rgba(139,92,246,0.2);
+
+    --color-text-primary:   #f8fafc;
     --color-text-secondary: #94a3b8;
-    --color-text-muted: #475569;
+    --color-text-muted:     #475569;
 
-    --gradient-brand: linear-gradient(90deg, #4812e4, #1aaccc);
-    --gradient-hero: linear-gradient(135deg, #1d1193 0%, #0a0812 60%, rgba(26, 172, 204, 0.08) 100%);
-    --gradient-card-border: linear-gradient(135deg, #4812e4 0%, #1aaccc 100%);
-    --gradient-text: linear-gradient(90deg, #1aaccc, #4812e4);
+    --gradient-brand:       linear-gradient(90deg, #8b5cf6, #c4b5fd);
+    --gradient-hero:        linear-gradient(135deg, #2e1065 0%, #0a0a0a 60%, transparent 100%);
+    --gradient-card-border: linear-gradient(135deg, #a179f1 0%, #c4b5fd 100%);
+    --gradient-text:        linear-gradient(90deg, #c4b5fd, #8b5cf6);
 
-    --shadow-glow-purple: 0 0 40px rgba(72, 18, 228, 0.4);
-    --shadow-glow-cyan: 0 0 40px rgba(26, 172, 204, 0.3);
-    --shadow-card: 0 4px 32px rgba(72, 18, 228, 0.12);
-    --shadow-card-hover: 0 8px 48px rgba(72, 18, 228, 0.25);
+    --shadow-glow-purple:   none;
+    --shadow-glow-cyan:     none;
+    --shadow-card:          none;
+    --shadow-card-hover:    none;
 
-    --border-glow: 1px solid rgba(72, 18, 228, 0.3);
-    --border-subtle: 1px solid rgba(148, 163, 184, 0.1);
+    --border-glow:   1px solid rgba(161,121,241,0.3);
+    --border-subtle: 1px solid rgba(255,255,255,0.07);
 
-    --container-max: 1200px;
-    --section-padding: 6rem;
+    --container-max:    1200px;
+    --section-padding:  6rem;
 
-    --radius-card: 12px;
-    --radius-button: 8px;
-    --radius-pill: 999px;
+    --radius-card:   16px;
+    --radius-button: 999px;
+    --radius-pill:   999px;
 
-    --transition-fast: 150ms ease;
+    --transition-fast:    150ms ease;
     --transition-default: 300ms ease;
-    --transition-slow: 600ms ease;
+    --transition-slow:    600ms ease;
 
-    --z-canvas: 1;
+    --z-canvas:       1;
     --z-hero-content: 10;
-    --z-navbar: 100;
+    --z-navbar:       100;
 }
