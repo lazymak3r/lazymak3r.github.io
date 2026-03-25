@@ -58,6 +58,8 @@ const myApps = [
     icon: melomanImg,
     iconBg: null,
     telegram: 'https://t.me/playmeloman_bot/meloman',
+    appStore:
+      'https://apps.apple.com/us/app/meloman-music-quiz-challenge/id6759525943',
   },
 ];
 

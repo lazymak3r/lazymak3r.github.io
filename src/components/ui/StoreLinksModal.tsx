@@ -2,12 +2,13 @@ import {motion, AnimatePresence} from 'framer-motion';
 
 import {IconExternalLinkSmall} from '../../assets/icons/IconExternalLinkSmall';
 import type {Project} from '../../data/experience';
+import telegramBadge from '../../assets/images/open_in_telegram.svg';
 import appStoreBadge from '../../assets/images/download_on_the_app_store.svg';
 import playStoreBadge from '../../assets/images/get_It_on_google_play.svg';
 
 function modalTitle(project: Project) {
   const hasStore = project.appStore || project.playStore;
-  const hasUrl = project.url;
+  const hasUrl = project.url || project.telegram;
   if (hasStore && hasUrl) return `Get ${project.name}`;
   if (hasStore) return `Download ${project.name}`;
   return `Open ${project.name}`;
@@ -83,6 +84,21 @@ export function StoreLinksModal({project, onClose}: StoreLinksModalProps) {
                 <motion.img
                   src={playStoreBadge}
                   alt="Get it on Google Play"
+                  className="h-10"
+                  whileHover={{scale: 1.05}}
+                  whileTap={{scale: 0.97}}
+                />
+              </a>
+            )}
+            {project.telegram && (
+              <a
+                href={project.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.img
+                  src={telegramBadge}
+                  alt="Open in Telegram"
                   className="h-10"
                   whileHover={{scale: 1.05}}
                   whileTap={{scale: 0.97}}

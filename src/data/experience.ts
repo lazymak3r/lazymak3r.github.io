@@ -3,6 +3,7 @@ export interface Project {
   url?: string;
   appStore?: string;
   playStore?: string;
+  telegram?: string;
 }
 
 export interface Experience {
@@ -53,7 +54,12 @@ export const experiences: Experience[] = [
         appStore:
           'https://apps.apple.com/us/app/musicdrop-music-playlists/id6705131153',
       },
-      {name: 'Meloman', url: 'https://t.me/playmeloman_bot/meloman'},
+      {
+        name: 'Meloman',
+        telegram: 'https://t.me/playmeloman_bot/meloman',
+        appStore:
+          'https://apps.apple.com/us/app/meloman-music-quiz-challenge/id6759525943',
+      },
     ],
   },
   {
