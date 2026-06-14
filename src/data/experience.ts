@@ -59,6 +59,7 @@ export const experiences: Experience[] = [
         telegram: 'https://t.me/playmeloman_bot/meloman',
         appStore:
           'https://apps.apple.com/us/app/meloman-music-quiz-challenge/id6759525943',
+        playStore: 'https://play.google.com/store/apps/details?id=com.meloman',
       },
     ],
   },
