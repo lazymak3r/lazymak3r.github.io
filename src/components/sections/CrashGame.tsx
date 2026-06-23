@@ -531,7 +531,7 @@ export function CrashGame() {
             Crash Game <span className="gradient-brand-text">Demo</span>
           </h2>
           <p className="mt-4 text-text-secondary text-sm max-w-md mx-auto">
-            A provably fair crash game. Cash out before the multiplier crashes —
+            A provably fair crash game. Cash out before the multiplier crashes
             built with Canvas API and React.
           </p>
         </div>
