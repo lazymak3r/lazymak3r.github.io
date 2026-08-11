@@ -1,12 +1,12 @@
 import {useState} from 'react';
 import {motion} from 'framer-motion';
 
-import {IconExternalLink} from '../../assets/icons/IconExternalLink';
 import {StoreLinksModal} from './StoreLinksModal';
 import type {ModalOrigin} from './StoreLinksModal';
 import {linkCount, singleLink} from '../../lib/projectLinks';
 import {springSnappy} from '../../lib/motion';
 import type {Project} from '../../data/experience';
+import {ArrowSquareOutIcon} from '@phosphor-icons/react';
 
 interface ProjectCardProps
   extends Pick<Project, 'url' | 'appStore' | 'playStore' | 'telegram'> {
@@ -64,7 +64,7 @@ export function ProjectCard({
                   aria-label={`Open ${name}`}
                   className="pressable text-text-muted hover:text-brand-soft transition-colors duration-200 shrink-0 ml-3"
                 >
-                  <IconExternalLink className="w-4 h-4" />
+                  <ArrowSquareOutIcon weight="regular" className="w-4 h-4" />
                 </a>
               ) : (
                 <button
@@ -72,7 +72,7 @@ export function ProjectCard({
                   aria-label={`Open ${name}`}
                   className="pressable text-text-muted hover:text-brand-soft transition-colors duration-200 shrink-0 ml-3"
                 >
-                  <IconExternalLink className="w-4 h-4" />
+                  <ArrowSquareOutIcon weight="regular" className="w-4 h-4" />
                 </button>
               ))}
           </div>

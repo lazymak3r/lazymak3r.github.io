@@ -1,28 +1,25 @@
-import {IconGitHub} from '../../assets/icons/IconGitHub';
-import {IconLinkedIn} from '../../assets/icons/IconLinkedIn';
-import {IconTwitterX} from '../../assets/icons/IconTwitterX';
-import {IconTelegram} from '../../assets/icons/IconTelegram';
 
+import {GithubLogoIcon, LinkedinLogoIcon, TelegramLogoIcon, XLogoIcon} from '@phosphor-icons/react';
 const socialLinks = [
   {
     label: 'GitHub',
     href: 'https://github.com/lazymak3r',
-    icon: <IconGitHub className="w-5 h-5" />,
+    icon: <GithubLogoIcon weight="fill" className="w-5 h-5" />,
   },
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/aramsuqiasyan',
-    icon: <IconLinkedIn className="w-5 h-5" />,
+    icon: <LinkedinLogoIcon weight="fill" className="w-5 h-5" />,
   },
   {
     label: 'Twitter',
     href: 'https://twitter.com/AramSuqiasyan97',
-    icon: <IconTwitterX className="w-5 h-5" />,
+    icon: <XLogoIcon weight="fill" className="w-5 h-5" />,
   },
   {
     label: 'Telegram',
     href: 'https://t.me/suqiasyan20aram',
-    icon: <IconTelegram className="w-5 h-5" />,
+    icon: <TelegramLogoIcon weight="fill" className="w-5 h-5" />,
   },
 ];
 

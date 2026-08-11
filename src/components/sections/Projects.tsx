@@ -35,8 +35,8 @@ export function Projects() {
             Selected <span className="gradient-brand-text">Projects</span>
           </h2>
           <p className="text-text-secondary mt-4 max-w-xl text-sm">
-            Production systems shipped across AI and agentic tooling, iGaming,
-            fintech, insurance, Web3, and logistics.
+            Production systems shipped across AI and agentic tooling, iGaming
+            and sports betting, fintech, insurance, Web3/DeFi, and SaaS.
           </p>
         </div>
 

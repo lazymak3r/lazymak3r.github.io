@@ -1,6 +1,6 @@
 import {motion} from 'framer-motion';
+import {CaretDownIcon} from '@phosphor-icons/react';
 
-import {IconChevronDown} from '../../assets/icons/IconChevronDown';
 
 export function ScrollIndicator() {
   return (
@@ -12,7 +12,7 @@ export function ScrollIndicator() {
       className="flex flex-col items-center gap-2 text-text-muted hover:text-brand-soft transition-colors duration-200"
     >
       <span className="text-xs tracking-widest uppercase">Scroll</span>
-      <IconChevronDown className="w-5 h-5" />
+      <CaretDownIcon weight="bold" className="w-5 h-5" />
     </motion.a>
   );
 }

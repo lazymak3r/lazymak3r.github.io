@@ -1,11 +1,11 @@
 import {useState} from 'react';
 import {motion} from 'framer-motion';
 
-import {IconExternalLinkSmall} from '../../assets/icons/IconExternalLinkSmall';
 import type {Experience, Project} from '../../data/experience';
 import {StoreLinksModal} from './StoreLinksModal';
 import type {ModalOrigin} from './StoreLinksModal';
 import {linkCount, singleLink} from '../../lib/projectLinks';
+import {ArrowUpRightIcon} from '@phosphor-icons/react';
 
 interface ExperienceItemProps {
   item: Experience;
@@ -122,7 +122,7 @@ export function ExperienceItem({item, index}: ExperienceItemProps) {
                       rel="noopener noreferrer"
                       className="pressable text-xs text-text-secondary hover:text-brand-soft transition-colors duration-200 flex items-center gap-1"
                     >
-                      <IconExternalLinkSmall className="w-3 h-3" />
+                      <ArrowUpRightIcon weight="bold" className="w-3 h-3" />
                       {project.name}
                     </a>
                   );
@@ -132,7 +132,7 @@ export function ExperienceItem({item, index}: ExperienceItemProps) {
                     onClick={(e) => openModal(e, project)}
                     className="pressable text-xs text-text-secondary hover:text-brand-soft transition-colors duration-200 flex items-center gap-1"
                   >
-                    <IconExternalLinkSmall className="w-3 h-3" />
+                    <ArrowUpRightIcon weight="bold" className="w-3 h-3" />
                     {project.name}
                   </button>
                 );

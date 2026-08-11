@@ -2,13 +2,13 @@ import {useEffect, useRef} from 'react';
 import {createPortal} from 'react-dom';
 import {motion, AnimatePresence} from 'framer-motion';
 
-import {IconExternalLinkSmall} from '../../assets/icons/IconExternalLinkSmall';
 import type {Project} from '../../data/experience';
 import telegramBadge from '../../assets/images/open_in_telegram.svg';
 import appStoreBadge from '../../assets/images/download_on_the_app_store.svg';
 import playStoreBadge from '../../assets/images/get_It_on_google_play.svg';
 import {useIsDesktop} from '../../hooks/useIsDesktop';
 import {springSheet, springSnappy, projectMomentum} from '../../lib/motion';
+import {ArrowUpRightIcon} from '@phosphor-icons/react';
 
 function modalTitle(project: Project) {
   const hasStore = project.appStore || project.playStore;
@@ -63,7 +63,7 @@ export function StoreLinksModal({
           transition={springSnappy}
           className="text-xs text-text-secondary hover:text-brand-soft transition-colors duration-200 flex items-center gap-1"
         >
-          <IconExternalLinkSmall className="w-3 h-3" />
+          <ArrowUpRightIcon weight="bold" className="w-3 h-3" />
           Visit Website
         </motion.a>
       )}

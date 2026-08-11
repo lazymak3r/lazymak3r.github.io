@@ -21,8 +21,8 @@ export function WorkExperience() {
             Work <span className="gradient-brand-text">Experience</span>
           </h2>
           <p className="text-text-secondary mt-4 max-w-xl mx-auto text-sm">
-            10+ years building production systems across AI, iGaming, fintech,
-            insurance, logistics, and Web3.
+            10+ years in production systems and B2B iGaming platform delivery,
+            across fintech, insurance, Web3/DeFi, and SaaS.
           </p>
         </div>
 

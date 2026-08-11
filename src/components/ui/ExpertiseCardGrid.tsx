@@ -1,10 +1,11 @@
 import {motion} from 'framer-motion';
+import type {Icon} from '@phosphor-icons/react';
 
 import {springSnappy, easeStandard} from '../../lib/motion';
 
 export interface ExpertiseCard {
   color: string;
-  iconPath: string;
+  icon: Icon;
   title: string;
   description: string;
   badges: string[];
@@ -48,17 +49,11 @@ export function ExpertiseCardGrid({items}: {items: ExpertiseCard[]}) {
                 border: '1px solid var(--color-brand-icon-border)',
               }}
             >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--color-brand-vivid)"
-                strokeWidth="1.75"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                style={{width: '1.125rem', height: '1.125rem'}}
-              >
-                <path d={item.iconPath} />
-              </svg>
+              <item.icon
+                size={18}
+                weight="duotone"
+                color="var(--color-brand-vivid)"
+              />
             </div>
 
             <h3 className="font-display font-semibold text-text-primary text-sm mb-2.5 leading-snug text-balance">

@@ -11,8 +11,7 @@ const navLinks = [
   {label: 'Experience', href: '#experience'},
   {label: 'Skills', href: '#skills'},
   {label: 'Hackathons', href: '#hackathons'},
-  {label: 'iGaming', href: '#igaming'},
-  {label: 'Expertise', href: '#system-expertise'},
+  {label: 'iGaming', href: '#system-expertise'},
   {label: 'Contact', href: '#contact'},
 ];
 

@@ -1,6 +1,6 @@
 import {motion} from 'framer-motion';
 
-import lazyImg from '../../assets/images/lazy.jpg';
+import portraitImg from '../../assets/images/aram.jpg';
 import trakioImg from '../../assets/images/trakio.png';
 import melomanImg from '../../assets/images/meloman.png';
 import localingoImg from '../../assets/images/localingo.png';
@@ -8,17 +8,39 @@ import musicdropImg from '../../assets/images/musicdrop.png';
 import appStoreBadge from '../../assets/images/download_on_the_app_store.svg';
 import telegramBadge from '../../assets/images/open_in_telegram.svg';
 import playStoreBadge from '../../assets/images/get_It_on_google_play.svg';
-import {ArrowRight} from '../../assets/icons/ArrowRight';
-import {IconGlobe} from '../../assets/icons/IconGlobe';
+import {
+  ArrowRightIcon,
+  ArrowsSplitIcon,
+  GaugeIcon,
+  GlobeIcon,
+  MagnifyingGlassIcon,
+  RobotIcon,
+  RocketLaunchIcon,
+} from '@phosphor-icons/react';
 import {SectionWrapper} from '../ui/SectionWrapper';
 import {springSnappy, springDefault} from '../../lib/motion';
 
 const highlights = [
-  {icon: '🤖', label: 'Architect and ship agentic pipelines end to end'},
-  {icon: '📊', label: 'Build eval layers: LLM-as-judge, golden datasets, regressions'},
-  {icon: '🔎', label: 'Design RAG and hybrid retrieval over your own data'},
-  {icon: '🔀', label: 'Multi-provider routing with runtime fallback and cost control'},
-  {icon: '🛠️', label: 'Take a system from MVP to unattended production'},
+  {
+    icon: RobotIcon,
+    label: 'Architect and ship agentic pipelines end to end',
+  },
+  {
+    icon: GaugeIcon,
+    label: 'Build eval layers: LLM-as-judge, golden datasets, regressions',
+  },
+  {
+    icon: MagnifyingGlassIcon,
+    label: 'Design RAG and hybrid retrieval over your own data',
+  },
+  {
+    icon: ArrowsSplitIcon,
+    label: 'Multi-provider routing with runtime fallback and cost control',
+  },
+  {
+    icon: RocketLaunchIcon,
+    label: 'Take a system from MVP to unattended production',
+  },
 ];
 
 const myApps = [
@@ -116,7 +138,19 @@ export function About() {
               </p>
               {highlights.map((h) => (
                 <div key={h.label} className="flex items-center gap-3">
-                  <span className="text-base">{h.icon}</span>
+                  <span
+                    className="shrink-0 flex items-center justify-center w-7 h-7 rounded-lg"
+                    style={{
+                      background: 'var(--color-brand-icon-bg)',
+                      border: '1px solid var(--color-brand-icon-border)',
+                    }}
+                  >
+                    <h.icon
+                      size={16}
+                      weight="duotone"
+                      color="var(--color-brand-vivid)"
+                    />
+                  </span>
                   <span className="text-text-secondary text-sm">{h.label}</span>
                 </div>
               ))}
@@ -131,7 +165,7 @@ export function About() {
                 }}
               >
                 Get in touch
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRightIcon className="w-4 h-4" />
               </a>
             </div>
           </motion.div>
@@ -147,7 +181,7 @@ export function About() {
             <div className="card-gradient-border relative">
               <div className="p-8 text-center space-y-6">
                 <img
-                  src={lazyImg}
+                  src={portraitImg}
                   alt="Aram Suqiasyan"
                   className="w-32 h-32 mx-auto rounded-full object-cover"
                 />
@@ -254,7 +288,7 @@ export function About() {
                         className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--color-n950)] bg-[var(--color-n950)] px-3 text-white"
                         style={{transformOrigin: 'center'}}
                       >
-                        <IconGlobe className="w-4 h-4 shrink-0" />
+                        <GlobeIcon size={21} weight="regular" className="shrink-0" />
                         <span className="flex flex-col leading-none text-left">
                           <span className="text-[8px] tracking-[0.08em] uppercase opacity-70">
                             Visit

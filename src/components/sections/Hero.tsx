@@ -1,7 +1,6 @@
 import {Suspense, lazy} from 'react';
 import {motion} from 'framer-motion';
 
-import {ArrowRight} from '../../assets/icons/ArrowRight';
 import {HeroDotField} from '../ui/HeroDotField';
 import {useIsDesktop} from '../../hooks/useIsDesktop';
 import {ScrollIndicator} from '../ui/ScrollIndicator';
@@ -9,6 +8,7 @@ import {AnimatedHeadline} from '../ui/AnimatedHeadline';
 import {useMouseParallax} from '../../hooks/useMouseParallax';
 import {useShouldRenderCanvas} from '../../hooks/useShouldRenderCanvas';
 import {easeStandard} from '../../lib/motion';
+import {ArrowRightIcon} from '@phosphor-icons/react';
 
 const HeroScene = lazy(() =>
   import('../three/HeroScene').then((m) => ({default: m.HeroScene})),
@@ -127,7 +127,7 @@ export function Hero() {
                 }}
               >
                 View My Work
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRightIcon weight="bold" className="w-4 h-4" />
               </a>
 
               <a

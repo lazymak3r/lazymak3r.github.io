@@ -1,32 +1,28 @@
 import {motion} from 'framer-motion';
 
-import {IconEmail} from '../../assets/icons/IconEmail';
-import {IconGitHub} from '../../assets/icons/IconGitHub';
-import {IconTwitterX} from '../../assets/icons/IconTwitterX';
-import {IconLinkedIn} from '../../assets/icons/IconLinkedIn';
-import {IconTelegram} from '../../assets/icons/IconTelegram';
 import {SectionWrapper} from '../ui/SectionWrapper';
+import {EnvelopeSimpleIcon, GithubLogoIcon, LinkedinLogoIcon, TelegramLogoIcon, XLogoIcon} from '@phosphor-icons/react';
 
 const socialLinks = [
   {
     label: 'GitHub',
     href: 'https://github.com/lazymak3r',
-    icon: <IconGitHub className="w-6 h-6" />,
+    icon: <GithubLogoIcon weight="fill" className="w-6 h-6" />,
   },
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/aramsuqiasyan',
-    icon: <IconLinkedIn className="w-6 h-6" />,
+    icon: <LinkedinLogoIcon weight="fill" className="w-6 h-6" />,
   },
   {
     label: 'Twitter / X',
     href: 'https://twitter.com/AramSuqiasyan97',
-    icon: <IconTwitterX className="w-6 h-6" />,
+    icon: <XLogoIcon weight="fill" className="w-6 h-6" />,
   },
   {
     label: 'Telegram',
     href: 'https://t.me/suqiasyan20aram',
-    icon: <IconTelegram className="w-6 h-6" />,
+    icon: <TelegramLogoIcon weight="fill" className="w-6 h-6" />,
   },
 ];
 
@@ -43,9 +39,9 @@ export function Contact() {
             <span className="gradient-brand-text">Together</span>
           </h2>
           <p className="text-text-secondary leading-relaxed mb-10">
-            I'm currently available for freelance work and open to new
-            opportunities. Whether you have a project in mind or just want to
-            chat, my inbox is always open.
+            Based in Yerevan, Armenia (GMT+4) and open to remote work. If you're
+            building agentic systems, LLM automations, or the evaluation layer
+            underneath them, my inbox is always open.
           </p>
 
           <motion.a
@@ -57,7 +53,7 @@ export function Contact() {
               background: 'var(--gradient-brand)',
             }}
           >
-            <IconEmail className="w-5 h-5" />
+            <EnvelopeSimpleIcon weight="regular" className="w-5 h-5" />
             aramsuqiasyan20@gmail.com
           </motion.a>
 

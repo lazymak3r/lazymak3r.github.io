@@ -1,8 +1,8 @@
 import {motion} from 'framer-motion';
 
-import {IconExternalLink} from '../../assets/icons/IconExternalLink';
 import type {Hackathon} from '../../data/hackathons';
 import {ui} from '../../styles/colors';
+import {ArrowSquareOutIcon} from '@phosphor-icons/react';
 
 export function HackathonCard({
   hackathon,
@@ -60,7 +60,7 @@ export function HackathonCard({
             aria-label={`View ${project} on Devpost`}
             className="text-text-muted hover:text-brand-soft transition-colors duration-200 shrink-0 ml-3"
           >
-            <IconExternalLink className="w-4 h-4" />
+            <ArrowSquareOutIcon weight="regular" className="w-4 h-4" />
           </a>
         </div>
 

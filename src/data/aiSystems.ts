@@ -1,8 +1,18 @@
+import type {Icon} from '@phosphor-icons/react';
+import {
+  ArrowsSplitIcon,
+  ClipboardTextIcon,
+  CpuIcon,
+  DatabaseIcon,
+  ShieldCheckIcon,
+  TreeStructureIcon,
+} from '@phosphor-icons/react';
+
 import {brand} from '../styles/colors';
 
 export interface AiSystem {
   color: string;
-  iconPath: string;
+  icon: Icon;
   title: string;
   description: string;
   badges: string[];
@@ -11,8 +21,7 @@ export interface AiSystem {
 export const aiSystems: AiSystem[] = [
   {
     color: brand.vivid,
-    iconPath:
-      'M12 2a2 2 0 012 2v1h3a2 2 0 012 2v3h1a2 2 0 010 4h-1v3a2 2 0 01-2 2h-3v1a2 2 0 01-4 0v-1H7a2 2 0 01-2-2v-3H4a2 2 0 010-4h1V7a2 2 0 012-2h3V4a2 2 0 012-2z',
+    icon: TreeStructureIcon,
     title: 'Agentic Pipelines & Tool Calling',
     description:
       'Multi-agent workflows on Claude, GPT, and Gemini using provider-native tool calling and structured outputs. Intake agents that interview a user and emit a structured brief, specialized agents generating in parallel, and MCP servers exposing platform capabilities so agents operate through native tools rather than scraped APIs.',
@@ -20,8 +29,7 @@ export const aiSystems: AiSystem[] = [
   },
   {
     color: brand.base,
-    iconPath:
-      'M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11',
+    icon: ClipboardTextIcon,
     title: 'LLM Evals & Review Gates',
     description:
       'The measurement layer under the automation: LLM-as-judge scoring calibrated on human-scored samples, golden datasets, and regression suites that re-run on every prompt and model change so quality drift is caught before production. Sampling across random, stratified, and targeted modes keeps coverage honest instead of cherry-picked.',
@@ -29,8 +37,7 @@ export const aiSystems: AiSystem[] = [
   },
   {
     color: brand.soft,
-    iconPath:
-      'M4 7v10c0 1.66 3.58 3 8 3s8-1.34 8-3V7M4 7c0 1.66 3.58 3 8 3s8-1.34 8-3M4 7c0-1.66 3.58-3 8-3s8 1.34 8 3m0 5c0 1.66-3.58 3-8 3s-8-1.34-8-3',
+    icon: DatabaseIcon,
     title: 'RAG & Hybrid Retrieval',
     description:
       'Retrieval built on pgvector, Pinecone, LanceDB, and Chroma, combining dense embeddings with BM25 for hybrid ranking. Vector search over Postgres backing agent toolkits, so retrieval and relational state live in one queryable system rather than drifting apart.',
@@ -38,8 +45,7 @@ export const aiSystems: AiSystem[] = [
   },
   {
     color: brand.vivid,
-    iconPath:
-      'M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z',
+    icon: ShieldCheckIcon,
     title: 'Guardrails, PII & Compliance',
     description:
       'Brand-safety, fact-verification, and SEO checks with structured-output validation before anything reaches a human approval gate - failed checks route back for regeneration rather than blocking the run. PII masked and tokenized before it reaches any model, so downstream services and analytics operate on tokenized references.',
@@ -47,8 +53,7 @@ export const aiSystems: AiSystem[] = [
   },
   {
     color: brand.deep,
-    iconPath:
-      'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15',
+    icon: ArrowsSplitIcon,
     title: 'Multi-Provider Routing & Cost Control',
     description:
       'Agent workloads run across Anthropic, OpenAI, Gemini, and AWS Bedrock behind a routing layer with runtime fallback: when a provider rate-limits or errors, traffic reroutes to a secondary rather than failing the run. Per-run spend and latency tracked through OpenRouter usage data, Bedrock metrics in CloudWatch, and Metabase dashboards, so cost drift is visible rather than discovered on the invoice.',
@@ -56,8 +61,7 @@ export const aiSystems: AiSystem[] = [
   },
   {
     color: brand.deep,
-    iconPath:
-      'M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01',
+    icon: CpuIcon,
     title: 'Local & Fine-Tuned Models',
     description:
       'Open-weight models deployed locally with Ollama and on HuggingFace, fine-tuned with Tinker, plus in-browser inference running with zero external API calls. Local inference chosen deliberately where cost, latency, or data residency makes it the better trade-off than a hosted API.',

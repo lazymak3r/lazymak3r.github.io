@@ -1,8 +1,18 @@
+import type {Icon} from '@phosphor-icons/react';
+import {
+  GiftIcon,
+  PackageIcon,
+  SoccerBallIcon,
+  ChartLineUpIcon,
+  PlugsConnectedIcon,
+  IdentificationCardIcon,
+} from '@phosphor-icons/react';
+
 import {brand} from '../styles/colors';
 
 export interface IgamingSystem {
   color: string;
-  iconPath: string;
+  icon: Icon;
   title: string;
   description: string;
   badges: string[];
@@ -10,79 +20,55 @@ export interface IgamingSystem {
 
 export const igamingSystems: IgamingSystem[] = [
   {
+    color: brand.vivid,
+    icon: GiftIcon,
+    title: 'Bonus Engine & Abuse Controls',
+    description:
+      'Built the bonus engine for a white-label casino and sportsbook, together with the abuse controls that sit around it - so promotional mechanics can run per operator without opening the platform up to bonus abuse.',
+    badges: ['Bonus engine', 'Abuse controls'],
+  },
+  {
     color: brand.base,
-    iconPath:
-      'M5 12H3l9-9 9 9h-2M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6',
-    title: 'High-Load iGaming Systems',
+    icon: IdentificationCardIcon,
+    title: 'Player Account Management',
     description:
-      'Built and scaled backend services under sustained peak traffic - connection pooling, query optimization, and horizontal pod autoscaling kept latency tight. Kafka handled bet placement and settlement pipelines so no event was ever dropped under load.',
-    badges: [
-      'Redis connection pooling',
-      'Auto-scaling pods',
-      'Event-driven settlement',
-    ],
-  },
-  {
-    color: brand.vivid,
-    iconPath:
-      'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
-    title: 'KYC/AML & Responsible Gambling',
-    description:
-      'Wired up Jumio, Sumsub, and Onfido verification flows with GeoIP jurisdiction routing baked in from the start. Shipped deposit limits, self-exclusion, session timers, and reality checks that hold up under regulatory audit.',
-    badges: [
-      'Multi-provider fallback',
-      'Jurisdiction-aware routing',
-      'Self-exclusion engine',
-    ],
-  },
-  {
-    color: brand.vivid,
-    iconPath:
-      'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z',
-    title: 'Payments & PCI DSS',
-    description:
-      'Integrated Skrill, Neteller, and MuchBetter alongside crypto deposit/withdrawal gateways - raw card data never touches the server. All flows run tokenized through Stripe and bank APIs, scoped to PCI DSS compliance from day one.',
-    badges: [
-      'Zero raw card storage',
-      'Multi-gateway routing',
-      'Crypto on/off-ramp',
-    ],
+      'Delivered player account management as a core platform system, covering the player record and account lifecycle that the casino, sportsbook, and downstream operator tooling all read from.',
+    badges: ['PAM', 'Account lifecycle'],
   },
   {
     color: brand.soft,
-    iconPath: 'M13 10V3L4 14h7v7l9-11h-7z',
-    title: 'Sports Data & Real-Time Feeds',
+    icon: SoccerBallIcon,
+    title: 'Sportsbook & In-House Games',
     description:
-      'Connected Sportradar/Betradar and BetConstruct SDKs to pull live odds, scores, and match timelines, then fanned them out to thousands of WebSocket clients via Redis Pub/Sub and Streams on ElastiCache - sub-second from source to screen.',
+      'Delivered the sportsbook alongside in-house games as part of the core platform, shipped to operators as a single white-label product rather than a set of separate integrations.',
+    badges: ['Sportsbook', 'In-house games'],
+  },
+  {
+    color: brand.vivid,
+    icon: PlugsConnectedIcon,
+    title: 'Slot-Provider Integrations',
+    description:
+      'Integrated third-party slot providers into the platform so operators inherit a working game catalogue on licence, without wiring each provider themselves.',
+    badges: ['Provider integrations', 'Game catalogue'],
+  },
+  {
+    color: brand.deep,
+    icon: ChartLineUpIcon,
+    title: 'Fraud Detection, Affiliates & CRM',
+    description:
+      'Wired in fraud detection through a third-party solution, plus affiliate campaign support and Fasttrack CRM integration - the acquisition and retention surface operators run the business on.',
     badges: [
-      'Sub-second delivery',
-      'Redis Streams fan-out',
-      'ElastiCache backed',
+      'Third-party fraud detection',
+      'Affiliate campaigns',
+      'Fasttrack CRM',
     ],
   },
   {
     color: brand.deep,
-    iconPath:
-      'M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z',
-    title: 'Game Math & RTP Engine',
+    icon: PackageIcon,
+    title: 'Operator Delivery & Licensing',
     description:
-      'Wrote RTP calculation modules and paytable engine logic from scratch for casino game backends. Outcome generation is provably fair and config-driven, so RTP targets can be adjusted per jurisdiction without touching core game logic.',
-    badges: [
-      'Config-driven RTP',
-      'Jurisdiction-aware payouts',
-      'Outcome verification',
-    ],
-  },
-  {
-    color: brand.deep,
-    iconPath: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
-    title: 'API Architecture',
-    description:
-      'Designed RESTful and GraphQL APIs consumed across sportsbook web, mobile, and third-party clients. OAuth 2.0/JWT auth, per-route rate limiting, and OpenAPI specs ship as first-class deliverables - not afterthoughts.',
-    badges: [
-      'Contract-first design',
-      'Per-route rate limits',
-      'Multi-platform clients',
-    ],
+      'Services containerized with Docker and shipped to operator environments through CI/CD. The platform is licensed to operators and sold with source code, serving LATAM, Asia, Russia, and Middle East markets.',
+    badges: ['Docker', 'CI/CD to operators', 'Source-code licensing'],
   },
 ];
