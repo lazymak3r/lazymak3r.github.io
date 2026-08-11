@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Structured summary for LLMs and AI agents
+# https://llmstxt.org/
+# https://lazymak3r.github.io/llms.txt
+
+Sitemap: https://lazymak3r.github.io/sitemap.xml
