@@ -15,7 +15,7 @@ const socialLinks = [
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/aram-suqiasyan-476305180/',
+    href: 'https://www.linkedin.com/in/aramsuqiasyan',
     icon: <IconLinkedIn className="w-6 h-6" />,
   },
   {

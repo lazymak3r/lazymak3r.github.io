@@ -11,7 +11,7 @@ const socialLinks = [
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/aram-suqiasyan-476305180/',
+    href: 'https://www.linkedin.com/in/aramsuqiasyan',
     icon: <IconLinkedIn className="w-5 h-5" />,
   },
   {
@@ -36,7 +36,7 @@ export function Footer() {
               Aram Suqiasyan
             </p>
             <p className="text-text-muted text-sm">
-              Senior AI Engineer - Agentic Systems & LLM Evaluation
+              Senior AI Product Engineer - Agentic Systems, AI Automations, LLM Evals and RAG
             </p>
           </div>
 

@@ -71,7 +71,7 @@ export function IgamingExpertise() {
                   y2="100%"
                 >
                   <stop offset="0%" stopColor={brand.base} />
-                  <stop offset="100%" stopColor={brand.soft} />
+                  <stop offset="100%" stopColor={brand.vivid} />
                 </linearGradient>
               </defs>
 
@@ -184,7 +184,7 @@ export function IgamingExpertise() {
                   <motion.div
                     className="h-full rounded-full"
                     style={{
-                      background: `linear-gradient(90deg, var(--color-brand-vivid), ${d.color})`,
+                      background: `linear-gradient(90deg, var(--color-brand-vivid), var(--color-brand-vivid))`,
                     }}
                     initial={{width: '0%'}}
                     animate={isInView ? {width: `${d.score}%`} : {width: '0%'}}

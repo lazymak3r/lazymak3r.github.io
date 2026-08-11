@@ -9,26 +9,32 @@ const categoryMeta: Record<SkillCategory, {color: string; label: string}> = {
     color: 'var(--color-brand-vivid)',
     label: 'AI & LLM Engineering',
   },
-  'Evaluation & Observability': {
-    color: 'var(--color-brand-soft)',
-    label: 'Evaluation & Observability',
+  'Evaluation, Safety & Observability': {
+    color: 'var(--color-brand-vivid)',
+    label: 'Evaluation, Safety & Observability',
   },
   'Retrieval & Data': {
     color: 'var(--color-brand-vivid)',
     label: 'Retrieval & Data',
   },
   'Backend & Reliability': {
-    color: 'var(--color-brand-soft)',
+    color: 'var(--color-brand-vivid)',
     label: 'Backend & Reliability',
   },
   'Cloud & DevOps': {
     color: 'var(--color-brand-vivid)',
     label: 'Cloud & DevOps',
   },
-  Languages: {color: 'var(--color-brand-soft)', label: 'Languages'},
-  Frontend: {color: 'var(--color-brand-vivid)', label: 'Frontend'},
-  Web3: {color: 'var(--color-brand-soft)', label: 'Web3'},
-  iGaming: {color: 'var(--color-brand-vivid)', label: 'iGaming'},
+  'Telegram Platform': {
+    color: 'var(--color-brand-vivid)',
+    label: 'Telegram Platform',
+  },
+  'Frontend & Internal Tooling': {
+    color: 'var(--color-brand-vivid)',
+    label: 'Frontend & Internal Tooling',
+  },
+  Languages: {color: 'var(--color-brand-vivid)', label: 'Languages'},
+  Domains: {color: 'var(--color-brand-vivid)', label: 'Domains'},
 };
 
 export function Skills() {

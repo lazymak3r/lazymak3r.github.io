@@ -22,10 +22,10 @@ export const aiSystems: AiSystem[] = [
     color: brand.base,
     iconPath:
       'M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11',
-    title: 'LLM Evaluation & Review Gates',
+    title: 'LLM Evals & Review Gates',
     description:
-      'The measurement layer under the automation: rubric-trained judge agents, scoring thresholds that route outcomes, and human-in-the-loop gates for judgment calls. Weekly sampling across random, stratified, and targeted modes keeps coverage honest instead of cherry-picked.',
-    badges: ['LLM-as-judge', 'Scoring rubrics', 'Human review gates'],
+      'The measurement layer under the automation: LLM-as-judge scoring calibrated on human-scored samples, golden datasets, and regression suites that re-run on every prompt and model change so quality drift is caught before production. Sampling across random, stratified, and targeted modes keeps coverage honest instead of cherry-picked.',
+    badges: ['LLM-as-judge', 'Golden datasets', 'Regressions on every change'],
   },
   {
     color: brand.soft,
@@ -40,19 +40,19 @@ export const aiSystems: AiSystem[] = [
     color: brand.vivid,
     iconPath:
       'M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z',
-    title: 'Guardrails & Output Validation',
+    title: 'Guardrails, PII & Compliance',
     description:
-      'Brand-voice alignment, fact verification, and SEO analysis running as guardrail checks before anything reaches a human approval gate. Output validation and regression suites catch drift when prompts or models change, so a model swap is a measured decision rather than a hope.',
-    badges: ['Fact verification', 'Brand-safety checks', 'Regression suites'],
+      'Brand-safety, fact-verification, and SEO checks with structured-output validation before anything reaches a human approval gate - failed checks route back for regeneration rather than blocking the run. PII masked and tokenized before it reaches any model, so downstream services and analytics operate on tokenized references.',
+    badges: ['Schema validation', 'PII masking & tokenization', 'Fact verification'],
   },
   {
     color: brand.deep,
     iconPath:
       'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15',
-    title: 'Production Reliability at Volume',
+    title: 'Multi-Provider Routing & Cost Control',
     description:
-      'Pipelines that run unattended: idempotent ingestion, retry and fallback handling, rate-limit backoff, and row-level error tracking that quarantines failures without halting the run. Raw inputs are retained for audit traceability so a bad run is diagnosable after the fact.',
-    badges: ['Idempotent ingestion', 'Failure quarantine', 'Audit traceability'],
+      'Agent workloads run across Anthropic, OpenAI, Gemini, and AWS Bedrock behind a routing layer with runtime fallback: when a provider rate-limits or errors, traffic reroutes to a secondary rather than failing the run. Per-run spend and latency tracked through OpenRouter usage data, Bedrock metrics in CloudWatch, and Metabase dashboards, so cost drift is visible rather than discovered on the invoice.',
+    badges: ['Runtime fallback', 'Per-run cost & latency', 'Drift alerting'],
   },
   {
     color: brand.deep,

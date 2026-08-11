@@ -87,11 +87,11 @@ export function Hero() {
               <span className="text-text-primary font-medium">
                 Aram Suqiasyan
               </span>
-              , a senior engineer with 10+ years building production systems,
-              now focused on LLM-powered automation - agentic pipelines on
-              Claude, GPT, and Gemini, with the measurement layer underneath:
-              rubric-based evaluation, human-calibrated review gates, tracing,
-              and cost and latency control.
+              , a senior product engineer with 10+ years in production systems
+              and B2B iGaming delivery, now building LLM automations and agentic
+              systems with a strong focus on evals and RAG - provider-native
+              SDKs, custom MCP integrations, runtime fallback, and per-run cost
+              and latency tracking.
             </motion.p>
 
             <motion.p
