@@ -11,7 +11,7 @@ const containerVariants = {
 
 export function WorkExperience() {
   return (
-    <SectionWrapper id="experience" className="bg-bg-surface/30">
+    <SectionWrapper id="experience" className="bg-bg-surface">
       <div className="section-container">
         <div className="mb-16 text-center">
           <p className="text-brand-soft text-sm font-medium tracking-widest uppercase mb-3">
@@ -21,8 +21,8 @@ export function WorkExperience() {
             Work <span className="gradient-brand-text">Experience</span>
           </h2>
           <p className="text-text-secondary mt-4 max-w-xl mx-auto text-sm">
-            7+ years building products across fintech, fitness, e-commerce, and
-            Web3.
+            10+ years building production systems across AI, iGaming, fintech,
+            insurance, logistics, and Web3.
           </p>
         </div>
 

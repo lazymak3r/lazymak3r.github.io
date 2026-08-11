@@ -44,7 +44,7 @@ export function IgamingExpertise() {
   const isInView = useInView(ref, {once: true, amount: 0.25});
 
   return (
-    <SectionWrapper id="igaming" className="bg-bg-surface/30">
+    <SectionWrapper id="igaming" className="bg-bg-surface">
       <div className="section-container" ref={ref}>
         <div className="mb-14 text-center">
           <p className="text-brand-soft text-sm font-medium tracking-widest uppercase mb-3">
@@ -80,7 +80,7 @@ export function IgamingExpertise() {
                   key={level}
                   points={hexagonPoints(level)}
                   fill="none"
-                  stroke="rgba(255,255,255,0.06)"
+                  stroke="var(--color-separator)"
                   strokeWidth="1"
                 />
               ))}
@@ -94,7 +94,7 @@ export function IgamingExpertise() {
                     y1={CENTER}
                     x2={end.x}
                     y2={end.y}
-                    stroke="rgba(255,255,255,0.08)"
+                    stroke="var(--color-separator)"
                     strokeWidth="1"
                   />
                 );
@@ -180,7 +180,7 @@ export function IgamingExpertise() {
                   </span>
                 </div>
 
-                <div className="h-px rounded-full bg-white/5 overflow-hidden mb-2.5">
+                <div className="h-px rounded-full bg-fill-strong overflow-hidden mb-2.5">
                   <motion.div
                     className="h-full rounded-full"
                     style={{
@@ -198,8 +198,8 @@ export function IgamingExpertise() {
                       key={tech}
                       className="px-2.5 py-0.5 rounded-full text-xs border"
                       style={{
-                        borderColor: 'rgba(255,255,255,0.08)',
-                        background: 'rgba(255,255,255,0.04)',
+                        borderColor: 'var(--color-separator)',
+                        background: 'var(--color-fill-muted)',
                         color: 'var(--color-text-secondary)',
                       }}
                     >

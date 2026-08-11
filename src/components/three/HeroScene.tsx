@@ -1,5 +1,6 @@
 import {Canvas} from '@react-three/fiber';
 import {Environment} from '@react-three/drei';
+import {Suspense} from 'react';
 import type {RefObject} from 'react';
 
 import {CameraRig} from './CameraRig';
@@ -38,14 +39,15 @@ export function HeroScene({mousePos}: HeroSceneProps) {
         pointerEvents: 'none',
       }}
     >
-      <ambientLight intensity={1.2} />
-      <directionalLight position={[5, 5, 5]} intensity={2} color={ui.white} />
-      <pointLight position={[-4, 2, 2]} intensity={3} color={brand.base} />
-      <pointLight position={[4, -1, 2]} intensity={2} color={brand.soft} />
-      <pointLight position={[0, -2, -3]} intensity={1.5} color={brand.vivid} />
-      <pointLight position={[0, 4, 1]} intensity={1.5} color={brand.faint} />
+      <ambientLight intensity={0.9} />
+      <directionalLight position={[4, 6, 6]} intensity={2.2} color={ui.white} />
+      <directionalLight position={[-6, 2, 4]} intensity={1.1} color={ui.white} />
+      <pointLight position={[-3, 1.5, 3]} intensity={5} color={brand.base} />
+      <pointLight position={[3, -2, 2]} intensity={3} color={brand.faint} />
 
-      <Environment preset="city" background={false} />
+      <Suspense fallback={null}>
+        <Environment preset="city" background={false} />
+      </Suspense>
 
       <BrandText3D />
       <CameraRig mousePos={mousePos} />

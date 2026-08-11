@@ -1,26 +1,6 @@
-import {motion} from 'framer-motion';
-
 import {SectionWrapper} from '../ui/SectionWrapper';
 import {igamingSystems} from '../../data/igamingSystems';
-
-const systems = igamingSystems;
-
-const containerVariants = {
-  hidden: {},
-  visible: {transition: {staggerChildren: 0.07}},
-};
-
-const cardVariants = {
-  hidden: {opacity: 0, y: 28},
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.35,
-      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
-    },
-  },
-};
+import {ExpertiseCardGrid} from '../ui/ExpertiseCardGrid';
 
 export function SystemExpertise() {
   return (
@@ -40,83 +20,7 @@ export function SystemExpertise() {
           </p>
         </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{once: true, amount: 0.1}}
-        >
-          {systems.map((system) => (
-            <motion.div
-              key={system.title}
-              variants={cardVariants}
-              whileHover={{
-                y: -5,
-                transition: {type: 'spring', stiffness: 400, damping: 20},
-              }}
-              className="group relative flex flex-col rounded-card overflow-hidden transition-shadow duration-300"
-              style={{
-                background: 'var(--color-bg-card)',
-                border: '1px solid rgba(255,255,255,0.07)',
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.borderColor =
-                  'rgba(255,255,255,0.14)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.borderColor =
-                  'rgba(255,255,255,0.07)';
-              }}
-            >
-              <div className="flex flex-col flex-1 p-6">
-                <div
-                  className="w-9 h-9 rounded-lg flex items-center justify-center mb-4 shrink-0"
-                  style={{
-                    background: 'var(--color-brand-icon-bg)',
-                    border: '1px solid var(--color-brand-icon-border)',
-                  }}
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="var(--color-brand-vivid)"
-                    strokeWidth="1.75"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    style={{width: '1.125rem', height: '1.125rem'}}
-                  >
-                    <path d={system.iconPath} />
-                  </svg>
-                </div>
-
-                <h3 className="font-display font-semibold text-text-primary text-sm mb-2.5 leading-snug">
-                  {system.title}
-                </h3>
-
-                <p className="text-text-secondary text-sm leading-relaxed flex-1 mb-5">
-                  {system.description}
-                </p>
-
-                <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {system.badges.map((badge) => (
-                    <span
-                      key={badge}
-                      className="text-xs px-2.5 py-1 rounded-full font-medium"
-                      style={{
-                        background: 'rgba(255,255,255,0.05)',
-                        color: 'var(--color-text-secondary)',
-                        border: '1px solid rgba(255,255,255,0.08)',
-                      }}
-                    >
-                      {badge}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        <ExpertiseCardGrid items={igamingSystems} />
       </div>
     </SectionWrapper>
   );

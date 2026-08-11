@@ -5,16 +5,35 @@ import {skills, skillCategories} from '../../data/skills';
 import type {SkillCategory} from '../../data/skills';
 import {ui} from '../../styles/colors';
 const categoryMeta: Record<SkillCategory, {color: string; label: string}> = {
+  'AI & LLM Engineering': {
+    color: 'var(--color-brand-vivid)',
+    label: 'AI & LLM Engineering',
+  },
+  'Evaluation & Observability': {
+    color: 'var(--color-brand-soft)',
+    label: 'Evaluation & Observability',
+  },
+  'Retrieval & Data': {
+    color: 'var(--color-brand-vivid)',
+    label: 'Retrieval & Data',
+  },
+  'Backend & Reliability': {
+    color: 'var(--color-brand-soft)',
+    label: 'Backend & Reliability',
+  },
+  'Cloud & DevOps': {
+    color: 'var(--color-brand-vivid)',
+    label: 'Cloud & DevOps',
+  },
+  Languages: {color: 'var(--color-brand-soft)', label: 'Languages'},
   Frontend: {color: 'var(--color-brand-vivid)', label: 'Frontend'},
-  Backend: {color: 'var(--color-brand-soft)', label: 'Backend'},
-  'AI & Web3': {color: 'var(--color-brand-vivid)', label: 'AI & Web3'},
-  Tooling: {color: 'var(--color-brand-soft)', label: 'Tooling'},
+  Web3: {color: 'var(--color-brand-soft)', label: 'Web3'},
   iGaming: {color: 'var(--color-brand-vivid)', label: 'iGaming'},
 };
 
 export function Skills() {
   return (
-    <SectionWrapper id="skills" className="bg-bg-surface/30">
+    <SectionWrapper id="skills" className="bg-bg-surface">
       <div className="section-container">
         <div className="mb-14 text-center">
           <p className="text-brand-soft text-sm font-medium tracking-widest uppercase mb-3">
@@ -87,8 +106,8 @@ export function Skills() {
                         }}
                         className="px-3 py-1.5 rounded-full text-xs border cursor-default select-none"
                         style={{
-                          borderColor: 'rgba(255,255,255,0.08)',
-                          background: 'rgba(255,255,255,0.04)',
+                          borderColor: 'var(--color-separator)',
+                          background: 'var(--color-fill-muted)',
                           color: 'var(--color-text-secondary)',
                         }}
                       >

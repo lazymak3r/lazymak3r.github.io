@@ -3,7 +3,7 @@ import helvetikerBold from 'three/examples/fonts/helvetiker_bold.typeface.json';
 import {Text3D, Center} from '@react-three/drei';
 import {useFrame, useThree} from '@react-three/fiber';
 import type {Group} from 'three';
-import {brand} from '../../styles/colors';
+import {neutral} from '../../styles/colors';
 
 const TEXT_SIZE = 0.42;
 const TEXT_HEIGHT = TEXT_SIZE / 3;
@@ -12,7 +12,7 @@ export function BrandText3D() {
   const groupRef = useRef<Group>(null);
   const {viewport} = useThree();
 
-  const scale = Math.max(0.35, Math.min(1.0, viewport.width * 0.26));
+  const scale = Math.max(0.22, Math.min(0.66, viewport.width * 0.165));
 
   useFrame((state) => {
     if (!groupRef.current) return;
@@ -36,16 +36,16 @@ export function BrandText3D() {
           bevelOffset={0}
           bevelSegments={6}
         >
-          LazyMak3R
+          Aram Suqiasyan
           <meshPhysicalMaterial
-            color={brand.deep}
+            color={neutral.n800}
             transparent
-            opacity={0.75}
-            roughness={0}
-            metalness={0.2}
+            opacity={0.92}
+            roughness={0.08}
+            metalness={0.35}
             clearcoat={1}
-            clearcoatRoughness={0}
-            envMapIntensity={4}
+            clearcoatRoughness={0.05}
+            envMapIntensity={1.6}
           />
         </Text3D>
       </Center>

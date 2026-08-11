@@ -28,15 +28,15 @@ export function HackathonCard({
         className="flex flex-col h-full p-6 rounded-card transition-all duration-300"
         style={{
           background: 'var(--color-bg-card)',
-          border: '1px solid rgba(255,255,255,0.07)',
+          border: 'var(--border-subtle)',
         }}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLDivElement).style.borderColor =
-            'rgba(255,255,255,0.14)';
+            'var(--color-separator-opaque)';
         }}
         onMouseLeave={(e) => {
           (e.currentTarget as HTMLDivElement).style.borderColor =
-            'rgba(255,255,255,0.07)';
+            'var(--color-separator)';
         }}
       >
         <div className="flex items-start justify-between mb-4">
@@ -77,7 +77,7 @@ export function HackathonCard({
             <span
               key={t}
               className="text-xs px-2 py-0.5 rounded-full text-text-secondary"
-              style={{background: 'rgba(248,250,252,0.05)'}}
+              style={{background: 'var(--color-fill-muted)'}}
             >
               {t}
             </span>

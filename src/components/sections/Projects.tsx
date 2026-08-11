@@ -12,9 +12,11 @@ const gridVariants = {
 const allProjects = experiences.flatMap((exp) =>
   exp.projects.map((p) => ({
     name: p.name,
+    blurb: p.blurb,
     url: p.url,
     appStore: p.appStore,
     playStore: p.playStore,
+    telegram: p.telegram,
     company: exp.company,
     period: exp.period,
     technologies: exp.technologies,
@@ -33,8 +35,8 @@ export function Projects() {
             Selected <span className="gradient-brand-text">Projects</span>
           </h2>
           <p className="text-text-secondary mt-4 max-w-xl text-sm">
-            Real-world products shipped across fintech, Web3, AI, logistics,
-            fitness, and more.
+            Production systems shipped across AI and agentic tooling, iGaming,
+            fintech, insurance, Web3, and logistics.
           </p>
         </div>
 

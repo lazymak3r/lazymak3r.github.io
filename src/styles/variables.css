@@ -1,37 +1,61 @@
 :root {
-    --color-bg-deep:     #0a0a0a;
-    --color-bg-surface:  #111111;
-    --color-bg-elevated: #1a1a1a;
-    --color-bg-card:     #141414;
+    --color-n50:  #fafafa;
+    --color-n100: #f5f5f5;
+    --color-n200: #e5e5e5;
+    --color-n300: #d4d4d4;
+    --color-n400: #a3a3a3;
+    --color-n500: #737373;
+    --color-n600: #525252;
+    --color-n700: #404040;
+    --color-n800: #262626;
+    --color-n900: #171717;
+    --color-n950: #0a0a0a;
 
-    --color-brand:       #a179f1;
-    --color-brand-vivid: #8b5cf6;
-    --color-brand-soft:  #c4b5fd;
-    --color-brand-faint: #ede9fe;
-    --color-brand-deep:  #5b21b6;
+    --color-bg-deep:     #fafafa;
+    --color-bg-surface:  #f5f5f5;
+    --color-bg-elevated: #ffffff;
+    --color-bg-card:     #ffffff;
 
-    --color-brand-vivid-a10: rgba(139,92,246,0.1);
-    --color-brand-vivid-a15: rgba(139,92,246,0.15);
-    --color-brand-vivid-a40: rgba(139,92,246,0.4);
-    --color-brand-icon-bg:   rgba(139,92,246,0.08);
-    --color-brand-icon-border: rgba(139,92,246,0.2);
+    --color-brand:       #ff5826;
+    --color-brand-vivid: #ff5826;
+    --color-brand-soft:  #c2410c;
+    --color-brand-faint: #ffe8e0;
+    --color-brand-deep:  #7c2d12;
 
-    --color-text-primary:   #f8fafc;
-    --color-text-secondary: #94a3b8;
-    --color-text-muted:     #475569;
+    --color-brand-vivid-a10: rgba(255,88,38,0.1);
+    --color-brand-vivid-a15: rgba(255,88,38,0.15);
+    --color-brand-vivid-a40: rgba(255,88,38,0.4);
+    --color-brand-icon-bg:   rgba(255,88,38,0.1);
+    --color-brand-icon-border: rgba(255,88,38,0.25);
 
-    --gradient-brand:       linear-gradient(90deg, #8b5cf6, #c4b5fd);
-    --gradient-hero:        linear-gradient(135deg, #2e1065 0%, #0a0a0a 60%, transparent 100%);
-    --gradient-card-border: linear-gradient(135deg, #a179f1 0%, #c4b5fd 100%);
-    --gradient-text:        linear-gradient(90deg, #c4b5fd, #8b5cf6);
+    --color-text-primary:   #0a0a0a;
+    --color-text-secondary: #525252;
+    --color-text-muted:     #737373;
+
+    --color-separator:        #e5e5e5;
+    --color-separator-opaque: #d4d4d4;
+
+    --color-fill-subtle:  #fafafa;
+    --color-fill-muted:   #f5f5f5;
+    --color-fill-strong:  #e5e5e5;
+
+    --gradient-brand:       linear-gradient(90deg, #ff5826, #ff9a3c);
+    --gradient-hero:        linear-gradient(180deg, #ffffff 0%, #fafafa 55%, #f5f5f5 100%);
+    --gradient-card-border: linear-gradient(135deg, #e5e5e5 0%, #d4d4d4 100%);
+    --gradient-text:        linear-gradient(90deg, #ff5826, #c2410c);
 
     --shadow-glow-purple:   none;
     --shadow-glow-cyan:     none;
-    --shadow-card:          none;
-    --shadow-card-hover:    none;
+    --shadow-card:          0 1px 2px rgba(10,10,10,0.05);
+    --shadow-card-hover:    0 12px 32px rgba(10,10,10,0.10);
+    --shadow-sheet:         0 24px 64px rgba(10,10,10,0.18);
 
-    --border-glow:   1px solid rgba(161,121,241,0.3);
-    --border-subtle: 1px solid rgba(255,255,255,0.07);
+    --border-glow:   1px solid rgba(255,88,38,0.3);
+    --border-subtle: 1px solid #e5e5e5;
+
+    --font-sans:    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif;
+    --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif;
+    --font-mono:    ui-monospace, 'SF Mono', SFMono-Regular, Menlo, monospace;
 
     --container-max:    1200px;
     --section-padding:  6rem;
@@ -47,4 +71,5 @@
     --z-canvas:       1;
     --z-hero-content: 10;
     --z-navbar:       100;
+    --z-modal:        200;
 }

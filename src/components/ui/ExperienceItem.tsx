@@ -4,6 +4,7 @@ import {motion} from 'framer-motion';
 import {IconExternalLinkSmall} from '../../assets/icons/IconExternalLinkSmall';
 import type {Experience, Project} from '../../data/experience';
 import {StoreLinksModal} from './StoreLinksModal';
+import type {ModalOrigin} from './StoreLinksModal';
 import {linkCount, singleLink} from '../../lib/projectLinks';
 
 interface ExperienceItemProps {
@@ -14,6 +15,15 @@ interface ExperienceItemProps {
 export function ExperienceItem({item, index}: ExperienceItemProps) {
   const isEven = index % 2 === 0;
   const [modalProject, setModalProject] = useState<Project | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [origin, setOrigin] = useState<ModalOrigin | null>(null);
+
+  const openModal = (e: React.MouseEvent<HTMLElement>, project: Project) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    setOrigin({x: r.left + r.width / 2, y: r.top + r.height / 2});
+    setModalProject(project);
+    setModalOpen(true);
+  };
 
   return (
     <>
@@ -54,7 +64,7 @@ export function ExperienceItem({item, index}: ExperienceItemProps) {
             className="p-6 rounded-card"
             style={{
               background: 'var(--color-bg-card)',
-              border: '1px solid rgba(255,255,255,0.07)',
+              border: 'var(--border-subtle)',
             }}
           >
             <div className="flex items-start justify-between gap-2 mb-2">
@@ -64,7 +74,7 @@ export function ExperienceItem({item, index}: ExperienceItemProps) {
               <span
                 className="text-xs px-2 py-0.5 rounded-full shrink-0"
                 style={{
-                  background: 'rgba(255,255,255,0.05)',
+                  background: 'var(--color-fill-muted)',
                   color: 'var(--color-text-muted)',
                 }}
               >
@@ -84,7 +94,7 @@ export function ExperienceItem({item, index}: ExperienceItemProps) {
                 <span
                   key={tech}
                   className="text-xs px-2 py-1 rounded-full text-text-secondary"
-                  style={{background: 'rgba(248,250,252,0.05)'}}
+                  style={{background: 'var(--color-fill-muted)'}}
                 >
                   {tech}
                 </span>
@@ -94,7 +104,15 @@ export function ExperienceItem({item, index}: ExperienceItemProps) {
             <div className="flex flex-wrap gap-3">
               {item.projects.map((project) => {
                 const count = linkCount(project);
-                if (count === 0) return null;
+                if (count === 0)
+                  return (
+                    <span
+                      key={project.name}
+                      className="text-xs text-text-muted flex items-center gap-1"
+                    >
+                      {project.name}
+                    </span>
+                  );
                 if (count === 1)
                   return (
                     <a
@@ -102,7 +120,7 @@ export function ExperienceItem({item, index}: ExperienceItemProps) {
                       href={singleLink(project)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-text-secondary hover:text-brand-soft transition-colors duration-200 flex items-center gap-1"
+                      className="pressable text-xs text-text-secondary hover:text-brand-soft transition-colors duration-200 flex items-center gap-1"
                     >
                       <IconExternalLinkSmall className="w-3 h-3" />
                       {project.name}
@@ -111,8 +129,8 @@ export function ExperienceItem({item, index}: ExperienceItemProps) {
                 return (
                   <button
                     key={project.name}
-                    onClick={() => setModalProject(project)}
-                    className="text-xs text-text-secondary hover:text-brand-soft transition-colors duration-200 flex items-center gap-1"
+                    onClick={(e) => openModal(e, project)}
+                    className="pressable text-xs text-text-secondary hover:text-brand-soft transition-colors duration-200 flex items-center gap-1"
                   >
                     <IconExternalLinkSmall className="w-3 h-3" />
                     {project.name}
@@ -124,12 +142,12 @@ export function ExperienceItem({item, index}: ExperienceItemProps) {
         </div>
       </motion.div>
 
-      {modalProject && (
-        <StoreLinksModal
-          project={modalProject}
-          onClose={() => setModalProject(null)}
-        />
-      )}
+      <StoreLinksModal
+        project={modalProject}
+        open={modalOpen}
+        origin={origin}
+        onClose={() => setModalOpen(false)}
+      />
     </>
   );
 }

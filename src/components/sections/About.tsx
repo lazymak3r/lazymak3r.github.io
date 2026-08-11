@@ -10,13 +10,14 @@ import telegramBadge from '../../assets/images/open_in_telegram.svg';
 import playStoreBadge from '../../assets/images/get_It_on_google_play.svg';
 import {ArrowRight} from '../../assets/icons/ArrowRight';
 import {SectionWrapper} from '../ui/SectionWrapper';
+import {springSnappy, springDefault} from '../../lib/motion';
 
 const highlights = [
-  {icon: '⚡', label: 'Build app from MVP to launch'},
-  {icon: '🔧', label: 'Revive & improve existing apps'},
-  {icon: '☁️', label: 'Firebase / AWS integrations'},
-  {icon: '👥', label: 'Lead frontend teams'},
-  {icon: '📝', label: 'Code reviews & mentoring'},
+  {icon: '🤖', label: 'Design and ship agentic pipelines end to end'},
+  {icon: '📊', label: 'Build LLM evaluation and review-gate systems'},
+  {icon: '🔍', label: 'Add tracing, cost, and latency control'},
+  {icon: '🛠️', label: 'Take a system from MVP to unattended production'},
+  {icon: '👥', label: 'Lead engineering teams and set standards'},
 ];
 
 const myApps = [
@@ -24,7 +25,7 @@ const myApps = [
     name: 'Trakio',
     tagline: 'Finance Tracker',
     description:
-      'A beautifully simple yet powerful finance tracker for personal and business use. Visualize spending, set goals, and take control of your money.',
+      'Personal and small-business finance tracker on the App Store, with recurring transaction scheduling and subscription billing.',
     icon: trakioImg,
     iconBg: null,
     appStore: 'https://apps.apple.com/us/app/trakio/id6748575726',
@@ -34,7 +35,7 @@ const myApps = [
     name: 'Localingo',
     tagline: 'Local Translation',
     description:
-      'Offline-first translator with peer-to-peer chat powered by on-device ML. Communicate in any language - no Wi-Fi or mobile data required.',
+      'Offline translator and peer-to-peer chat running translation models entirely on device via Google ML Kit. Two phones pair over local Wi-Fi or hotspot for real-time translated conversation - no network dependency, no data collection.',
     icon: localingoImg,
     iconBg: null,
     appStore:
@@ -44,7 +45,7 @@ const myApps = [
     name: 'MusicDrop',
     tagline: 'Offline Music Player',
     description:
-      'Take control of your music library with offline playback, background playing, and high-quality audio - your music, always available, wherever you are.',
+      'Audio library management app with offline playback, background playing, and high-quality audio. Shipped independently on the App Store.',
     icon: musicdropImg,
     iconBg: null,
     appStore:
@@ -54,7 +55,7 @@ const myApps = [
     name: 'Meloman',
     tagline: 'Music Quiz Challenge',
     description:
-      'A music quiz Telegram Mini App. Test your knowledge across albums and artists in solo or team multiplayer mode, with a coin-based reward system and leaderboard.',
+      'Music quiz on the App Store, Google Play, and as a Telegram Mini App. Uses AI source separation to isolate melody from vocals for Instrumental Mode, real-time multiplayer Duels over WebSockets, and StoreKit purchases - with Telegram bots and long-running agent processes in production.',
     icon: melomanImg,
     iconBg: null,
     telegram: 'https://t.me/playmeloman_bot/meloman',
@@ -86,23 +87,23 @@ export function About() {
             className="space-y-5"
           >
             <p className="text-text-secondary leading-relaxed">
-              I'm a passionate full-stack software engineer who strives to
-              create fascinating and breathtaking user experiences. With a
-              user-oriented approach, I make sure to meet deadlines and deliver
-              the best value to every project.
+              Senior software engineer with 10+ years building production
+              systems across iGaming, fintech, insurance, and SaaS, now focused
+              on LLM-powered automation.
             </p>
             <p className="text-text-secondary leading-relaxed">
-              With extensive knowledge of JavaScript, specifically React, React
-              Native, Node, and Angular, I've led front-end teams that launched
-              global SaaS apps and worked with individuals and companies on
-              projects from MVP to platforms serving hundreds of thousands of
-              users.
+              I ship agentic pipelines on frontier models - Claude, GPT, and
+              Gemini - using provider-native tool calling, structured outputs,
+              and MCP integrations, with the measurement layer underneath:
+              rubric-based LLM evaluation, human-calibrated review gates,
+              tracing, and cost and latency control.
             </p>
             <p className="text-text-secondary leading-relaxed">
-              I've built and improved dozens of successful applications across
-              social networking, education, entertainment, fitness, fintech, and
-              commerce. I also teach development courses in JS, HTML, CSS, and
-              React.js.
+              I build generation-to-QA-to-publish workflows that run unattended
+              at volume, with idempotency, retries, and failure isolation as
+              first-class concerns. I've also delivered B2B iGaming platform
+              systems including a bonus engine, player account management, and
+              fraud detection.
             </p>
 
             <div className="pt-4 space-y-3">
@@ -119,8 +120,8 @@ export function About() {
 
             <div className="pt-4">
               <a
-                href="mailto:aramsuqiasyan20@gmail.com"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-button font-medium text-sm text-text-primary transition-all duration-300"
+                href="#contact"
+                className="pressable inline-flex items-center gap-2 px-6 py-3 rounded-button font-medium text-sm text-white"
                 style={{
                   background: 'var(--gradient-brand)',
                 }}
@@ -136,10 +137,7 @@ export function About() {
             whileInView={{opacity: 1, x: 0}}
             viewport={{once: true, amount: 0.3}}
             transition={{duration: 0.45, ease: 'easeOut', delay: 0.1}}
-            whileHover={{
-              scale: 1.02,
-              transition: {type: 'spring', stiffness: 300},
-            }}
+            whileHover={{scale: 1.02, transition: springDefault}}
             className="relative"
           >
             <div className="card-gradient-border relative">
@@ -153,30 +151,31 @@ export function About() {
                   <h3 className="font-display font-bold text-xl text-text-primary">
                     Aram Suqiasyan
                   </h3>
-                  <p className="text-brand-soft text-sm mt-1">
-                    Full-Stack Software Engineer
+                  <p className="text-brand-soft text-sm mt-1 text-balance">
+                    Senior AI Engineer - Agentic Systems, LLM Evaluation and
+                    Production Reliability
                   </p>
                 </div>
                 <div className="flex justify-center gap-6 pt-2">
                   <div className="text-center">
                     <p className="font-bold text-2xl gradient-brand-text font-display">
-                      7+
+                      10+
                     </p>
                     <p className="text-text-muted text-xs mt-1">Years exp.</p>
                   </div>
-                  <div className="w-px bg-white/10" />
+                  <div className="w-px bg-[var(--color-separator)]" />
                   <div className="text-center">
                     <p className="font-bold text-2xl gradient-brand-text font-display">
-                      50+
+                      4
                     </p>
-                    <p className="text-text-muted text-xs mt-1">Projects</p>
+                    <p className="text-text-muted text-xs mt-1">Domains</p>
                   </div>
-                  <div className="w-px bg-white/10" />
+                  <div className="w-px bg-[var(--color-separator)]" />
                   <div className="text-center">
                     <p className="font-bold text-2xl gradient-brand-text font-display">
-                      6
+                      Remote
                     </p>
-                    <p className="text-text-muted text-xs mt-1">Companies</p>
+                    <p className="text-text-muted text-xs mt-1">GMT+4</p>
                   </div>
                 </div>
               </div>
@@ -193,7 +192,7 @@ export function About() {
         >
           <div className="mb-8">
             <p className="text-brand-soft text-sm font-medium tracking-widest uppercase mb-3">
-              Co-founded
+              Indie Dev Projects
             </p>
             <h3 className="font-display font-bold text-2xl md:text-3xl text-text-primary">
               Apps I've <span className="gradient-brand-text">Shipped</span>
@@ -247,11 +246,7 @@ export function About() {
                         rel="noopener noreferrer"
                         whileHover={{scale: 1.06}}
                         whileTap={{scale: 0.97}}
-                        transition={{
-                          type: 'spring',
-                          stiffness: 400,
-                          damping: 20,
-                        }}
+                        transition={springSnappy}
                         className="inline-block"
                         style={{transformOrigin: 'center'}}
                       >
@@ -269,11 +264,7 @@ export function About() {
                         rel="noopener noreferrer"
                         whileHover={{scale: 1.06}}
                         whileTap={{scale: 0.97}}
-                        transition={{
-                          type: 'spring',
-                          stiffness: 400,
-                          damping: 20,
-                        }}
+                        transition={springSnappy}
                         className="inline-block"
                         style={{transformOrigin: 'center'}}
                       >
@@ -291,11 +282,7 @@ export function About() {
                         rel="noopener noreferrer"
                         whileHover={{scale: 1.06}}
                         whileTap={{scale: 0.97}}
-                        transition={{
-                          type: 'spring',
-                          stiffness: 400,
-                          damping: 20,
-                        }}
+                        transition={springSnappy}
                         className="inline-block"
                         style={{transformOrigin: 'center'}}
                       >

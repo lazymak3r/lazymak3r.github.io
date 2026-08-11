@@ -1,16 +1,18 @@
 import {useEffect, useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 
+import {springSnappy, springSheet, easeStandard} from '../../lib/motion';
+
 const navLinks = [
   {label: 'Home', href: '#hero'},
   {label: 'About', href: '#about'},
-  {label: 'Experience', href: '#experience'},
+  {label: 'AI Systems', href: '#ai-systems'},
   {label: 'Projects', href: '#projects'},
-  {label: 'Hackathons', href: '#hackathons'},
+  {label: 'Experience', href: '#experience'},
   {label: 'Skills', href: '#skills'},
+  {label: 'Hackathons', href: '#hackathons'},
   {label: 'iGaming', href: '#igaming'},
   {label: 'Expertise', href: '#system-expertise'},
-  {label: 'Demo', href: '#demo'},
   {label: 'Contact', href: '#contact'},
 ];
 
@@ -20,50 +22,76 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll, {passive: true});
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  useEffect(() => {
     const sectionIds = navLinks.map((l) => l.href.slice(1));
-    const observers: IntersectionObserver[] = [];
+    let raf = 0;
 
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      const obs = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) setActiveSection(id);
-        },
-        {threshold: 0.4},
-      );
-      obs.observe(el);
-      observers.push(obs);
-    });
+    const update = () => {
+      raf = 0;
+      setScrolled(window.scrollY > 40);
 
-    return () => observers.forEach((o) => o.disconnect());
+      const line = window.innerWidth >= 768 ? 96 : 80;
+      const doc = document.documentElement;
+      const atBottom =
+        window.scrollY + window.innerHeight >= doc.scrollHeight - 2;
+
+      if (atBottom) {
+        for (let i = sectionIds.length - 1; i >= 0; i--) {
+          if (document.getElementById(sectionIds[i])) {
+            setActiveSection(sectionIds[i]);
+            return;
+          }
+        }
+      }
+
+      let current = sectionIds[0];
+      let best = -Infinity;
+
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const top = el.getBoundingClientRect().top;
+        if (top <= line && top > best) {
+          best = top;
+          current = id;
+        }
+      }
+
+      setActiveSection(current);
+    };
+
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onScroll);
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   return (
     <motion.header
       initial={{y: -80, opacity: 0}}
       animate={{y: 0, opacity: 1}}
-      transition={{duration: 0.4, ease: [0.16, 1, 0.3, 1]}}
+      transition={{duration: 0.4, ease: easeStandard}}
       style={{zIndex: 'var(--z-navbar)' as unknown as number}}
-      className="fixed top-0 left-0 right-0 transition-all duration-300"
+      className="fixed top-0 left-0 right-0"
     >
       <div
-        className={`relative transition-all duration-300 ${scrolled ? 'bg-bg-deep/80 backdrop-blur-md' : 'bg-transparent'}`}
+        className={`material-chrome relative transition-[background-color,backdrop-filter] duration-300 ${
+          scrolled ? 'is-floating' : ''
+        }`}
       >
-        <div
-          className={`absolute bottom-0 left-0 right-0 h-px bg-white/5 transition-opacity duration-300 ${scrolled ? 'opacity-100' : 'opacity-0'}`}
-        />
         <div className="section-container">
           <nav className="flex items-center justify-between h-16 md:h-20">
             <a
               href="#hero"
-              className="font-display font-bold text-xl gradient-brand-text"
+              className="pressable font-display font-bold text-xl gradient-brand-text"
             >
               Aram Suqiasyan
             </a>
@@ -73,7 +101,7 @@ export function Navbar() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className={`text-sm font-medium transition-colors duration-200 ${
+                    className={`pressable text-sm font-medium transition-colors duration-200 ${
                       activeSection === link.href.slice(1)
                         ? 'text-brand-soft'
                         : 'text-text-secondary hover:text-text-primary'
@@ -86,35 +114,56 @@ export function Navbar() {
             </ul>
 
             <button
-              className="lg:hidden flex flex-col gap-1.5 p-2"
+              className="pressable lg:hidden flex flex-col gap-1.5 p-2"
               onClick={() => setMenuOpen((v) => !v)}
               aria-label="Toggle menu"
+              aria-expanded={menuOpen}
             >
               <motion.span
                 animate={menuOpen ? {rotate: 45, y: 8} : {rotate: 0, y: 0}}
-                className="block w-6 h-0.5 bg-text-primary origin-center transition-all"
+                transition={springSnappy}
+                className="block w-6 h-0.5 bg-text-primary origin-center"
               />
               <motion.span
                 animate={menuOpen ? {opacity: 0} : {opacity: 1}}
+                transition={springSnappy}
                 className="block w-6 h-0.5 bg-text-primary"
               />
               <motion.span
                 animate={menuOpen ? {rotate: -45, y: -8} : {rotate: 0, y: 0}}
+                transition={springSnappy}
                 className="block w-6 h-0.5 bg-text-primary origin-center"
               />
             </button>
           </nav>
         </div>
+
+        <div
+          aria-hidden="true"
+          className={`scroll-edge pointer-events-none absolute left-0 right-0 top-full h-6 transition-opacity duration-300 ${
+            scrolled ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
       </div>
 
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{height: 0, opacity: 0}}
-            animate={{height: 'auto', opacity: 1}}
-            exit={{height: 0, opacity: 0}}
-            transition={{duration: 0.3, ease: 'easeInOut'}}
-            className="lg:hidden overflow-hidden bg-bg-surface/95 backdrop-blur-md border-b border-white/5"
+            key="mobile-menu"
+            initial={{y: '-100%', opacity: 0}}
+            animate={{y: 0, opacity: 1}}
+            exit={{y: '-100%', opacity: 0}}
+            transition={springSheet}
+            drag="y"
+            dragDirectionLock
+            dragConstraints={{top: 0, bottom: 0}}
+            dragElastic={{top: 0.55, bottom: 0}}
+            onDragEnd={(_, info) => {
+              if (info.velocity.y < -300 || info.offset.y < -60) {
+                setMenuOpen(false);
+              }
+            }}
+            className="material-menu lg:hidden overflow-hidden touch-pan-x"
           >
             <ul className="section-container py-6 flex flex-col gap-5">
               {navLinks.map((link) => (
@@ -122,7 +171,7 @@ export function Navbar() {
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`text-base font-medium transition-colors ${
+                    className={`pressable text-base font-medium transition-colors ${
                       activeSection === link.href.slice(1)
                         ? 'text-brand-soft'
                         : 'text-text-secondary'
@@ -133,6 +182,10 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
+            <div
+              aria-hidden="true"
+              className="mx-auto mb-3 h-1 w-10 rounded-full bg-[var(--color-n300)]"
+            />
           </motion.div>
         )}
       </AnimatePresence>
