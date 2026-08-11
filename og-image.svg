@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <pattern id="dotsGray" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="13" cy="13" r="2.6" fill="#e5e5e5" />
+    </pattern>
+    <pattern id="dotsInk" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="13" cy="13" r="2.9" fill="#262626" />
+    </pattern>
+    <pattern id="dotsAccent" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="13" cy="13" r="3.2" fill="#ff5826" />
+    </pattern>
+
+    <radialGradient id="accentFalloff" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1" />
+      <stop offset="55%" stop-color="#fff" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="inkFalloff" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.85" />
+      <stop offset="70%" stop-color="#fff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+    </radialGradient>
+
+    <mask id="accentMask">
+      <rect x="700" y="40" width="560" height="560" fill="url(#accentFalloff)" />
+    </mask>
+    <mask id="inkMask">
+      <rect x="620" y="0" width="640" height="630" fill="url(#inkFalloff)" />
+    </mask>
+
+    <linearGradient id="warmWash" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff5826" stop-opacity="0.10" />
+      <stop offset="60%" stop-color="#ff5826" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#ff5826" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="fadeLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fafafa" stop-opacity="1" />
+      <stop offset="42%" stop-color="#fafafa" stop-opacity="0.92" />
+      <stop offset="78%" stop-color="#fafafa" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#fafafa" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#fafafa" />
+  <rect width="1200" height="630" fill="url(#dotsGray)" />
+  <rect x="620" y="0" width="640" height="630" fill="url(#dotsInk)" mask="url(#inkMask)" />
+  <rect x="700" y="40" width="560" height="560" fill="url(#dotsAccent)" mask="url(#accentMask)" />
+  <rect width="1200" height="630" fill="url(#warmWash)" />
+  <rect x="0" y="0" width="900" height="630" fill="url(#fadeLeft)" />
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+    <text x="80" y="150" fill="#ff5826" font-size="22" font-weight="600" letter-spacing="3.4">
+      SENIOR AI PRODUCT ENGINEER
+    </text>
+
+    <text x="76" y="268" fill="#0a0a0a" font-size="94" font-weight="700" letter-spacing="-2.6">
+      Aram Suqiasyan
+    </text>
+
+    <text x="80" y="336" fill="#404040" font-size="30" font-weight="500" letter-spacing="-0.4">
+      Agentic Systems · AI Automations · LLM Evals · RAG
+    </text>
+
+    <text x="80" y="404" fill="#737373" font-size="23" font-weight="400" letter-spacing="-0.1">
+      10+ years in production systems and B2B iGaming delivery
+    </text>
+
+    <g transform="translate(80, 470)">
+      <rect x="0" y="0" width="360" height="52" rx="26" fill="#0a0a0a" />
+      <text x="26" y="33" fill="#ffffff" font-size="21" font-weight="600" letter-spacing="-0.2">
+        lazymak3r.github.io
+      </text>
+      <circle cx="326" cy="26" r="4.5" fill="#ff5826" />
+    </g>
+
+    <text x="80" y="566" fill="#737373" font-size="20" font-weight="400">
+      Yerevan, Armenia (GMT+4)
+    </text>
+    <text x="330" y="566" fill="#a3a3a3" font-size="20" font-weight="400">·</text>
+    <text x="350" y="566" fill="#ff5826" font-size="20" font-weight="600">
+      Open to Remote
+    </text>
+  </g>
+</svg>
