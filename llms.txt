@@ -1,0 +1,100 @@
+# Aram Suqiasyan
+
+> Senior AI Product Engineer - Agentic Systems, AI Automations, LLM Evals and RAG.
+> Senior product engineer with 10+ years in production systems and B2B iGaming
+> platform delivery, now building LLM automations and agentic systems with a
+> strong focus on evals and RAG.
+
+Based in Yerevan, Armenia (GMT+4). Open to remote work.
+
+- Site: https://lazymak3r.github.io/
+- Email: aramsuqiasyan20@gmail.com
+- GitHub: https://github.com/lazymak3r
+- LinkedIn: https://www.linkedin.com/in/aramsuqiasyan
+- X: https://twitter.com/AramSuqiasyan97
+- Telegram: https://t.me/suqiasyan20aram
+
+## Summary
+
+Architects and ships agentic pipelines on Claude, OpenAI models, and Gemini using
+provider-native SDKs and custom MCP integrations, with runtime provider fallback,
+retries, and per-run cost and latency tracking. Has shipped an evaluation layer with
+LLM-as-judge scoring, golden datasets, regression suites that run on prompt or model
+change, and tracing across multi-step runs. Built a generation-to-QA-to-publish
+workflow for the Atlassian ecosystem that runs unattended at volume, with idempotency,
+rate-limit handling, and failure isolation as first-class concerns. Delivered B2B
+iGaming platform systems including a bonus engine, player account management, and
+fraud detection, alongside Telegram Mini Apps and long-running Telegram bots in
+production.
+
+## Skills
+
+- Languages: Python, TypeScript, JavaScript (ES2024), Node.js, SQL
+- AI and LLM Engineering: OpenAI API, Anthropic Claude API, Google Gemini, AWS Bedrock, OpenRouter, Tool Calling, Structured Outputs, MCP (Model Context Protocol), AI Agents, Multi-Agent Orchestration, Multi-Provider Routing and Fallback, RAG Pipelines, Prompt Engineering, LangChain, LangGraph, Google Agent Development Kit, Mastra.ai, n8n, Whisper API, Claude Code, Local LLM Deployment (Ollama), HuggingFace Model Deployment, Model Fine-Tuning (Tinker)
+- Evaluation, Safety and Observability: LLM-as-Judge, Scoring Rubrics, Golden and Test Datasets, Human-Calibrated Judge Scoring, Error Analysis, Stratified and Targeted Sampling, Human-in-the-Loop Review Gates, Regression Suites on Every Change, Output and Schema Validation, Brand-Safety and Fact-Verification Guardrails, PII Masking and Tokenization, Compliance-Aware Output, LangSmith Tracing, CloudWatch, Metabase Dashboards, Per-Run Cost and Latency Tracking, Quality and Cost Drift Alerting
+- Retrieval and Data: PostgreSQL, pgvector, PineconeDB, LanceDB, ChromaDB, BM25 and Hybrid Retrieval, Elasticsearch, OpenSearch, MongoDB, Redis, MySQL, Supabase, Snowflake
+- Backend and Reliability: FastAPI, NestJS, Express.js, GraphQL, REST, WebSockets, SSE, Socket.IO, Kafka, NATS, Redis Pub/Sub, Trigger.dev, Queues and Background Workers, Idempotency, Retry and Fallback Handling, Rate-Limit Handling and Exponential Backoff, Failure Isolation and Quarantine
+- Cloud and DevOps: AWS (Lambda, ECS, EC2, S3, DynamoDB, CloudWatch, WAF, Bedrock, SageMaker), Docker, Kubernetes, CI/CD (GitHub Actions, AWS CodePipeline), Git, Firebase, Vercel
+- Frontend and Internal Tooling: React, Next.js, React Native, Chakra UI, Tailwind CSS, Redux, Zustand, Internal Dashboards and Chat Interfaces
+- Telegram Platform: Telegram Bot API, Telegram Mini Apps (TMA), Long-Running Bot Processes, In-App Purchase and Payment Flows, Real-Time Multiplayer over WebSockets
+- Domains: iGaming and Sports Betting, Fintech, Insurance, Web3/DeFi, SaaS
+
+## Experience
+
+### Spayon.io - Lead FinTech Engineer, Contract (Remote), Jan 2025 - Present
+Lead engineer on a multi-currency payment gateway processing high-frequency
+transactions for 100+ online merchants across Central Asia, Europe, and North
+America, spanning payment, subscription, and wallet APIs, a multi-vendor admin
+portal, and ARCA and MIR payment rail integrations.
+
+- Financial Ledger Inspector: internal reconciliation tool comparing vendor wallet balances against a double-entry ledger in real time, flagging per-vendor discrepancies and exposing a full journal-entry audit trail.
+- Metabase operations dashboard covering vendor liquidity, fee revenue by deposit and withdrawal, multi-currency gateway receipts, and reserve balances.
+- PII handling: masking and tokenization of cardholder and merchant data across payment, subscription, and wallet APIs.
+
+### CAIAT.US - Principal AI Product Engineer, Contract, June 2024 - Present
+Delivery engineer across client AI platform engagements.
+
+- Zetik: B2B iGaming and sportsbook platform, source-code licensed to operators. Bonus engine and abuse controls, player account management, sportsbook and in-house games, slot-provider integrations, affiliate campaigns, Fasttrack CRM, third-party fraud detection. Serving LATAM, Asia, Russia, and Middle East markets.
+- AI-Native QA Pipeline (Atlassian ecosystem): automated quality-evaluation system for a 30-agent service desk scoring 200+ tickets per week, with a rubric-trained LLM-as-judge calibrated on human-scored samples, golden datasets, and regression suites re-run on every prompt and model change. Cut the feedback cycle from 6 days to 2, reached full coverage on high-priority tickets within 30 days, surfaced 7 knowledge-base articles. Published as an Atlassian community case study.
+- Multi-Agent Content Pipeline (LegalCalls LLC): Whisper transcription, an LLM intake agent, three specialized agents generating in parallel, and output guardrails running brand-safety, fact-verification, and SEO checks before a human approval gate.
+- Rev-Box: carrier data ETL platform for P&C insurance with idempotent ingestion, row-level error quarantine and retry, PII masking, and in-browser LLM mapping suggestions running with zero external API calls.
+- MCP Server (Qlerify): Model Context Protocol server exposing product-modeling capabilities to LLM clients via native tool calling.
+- Multi-provider orchestration across Anthropic, OpenAI, Gemini, and AWS Bedrock behind a routing layer with runtime fallback, with per-run spend and latency tracked through OpenRouter, CloudWatch, and Metabase.
+- Local and fine-tuned model deployment with Ollama, HuggingFace, and Tinker.
+
+### brandwise.ai (formerly 1hero.ai) - Founding AI Product Engineer (Remote), Aug 2023 - May 2024
+Co-founded and architected an AI-powered customer support SaaS from zero. Python and
+FastAPI backend handling ticket ingestion, LLM-based routing, and AI-drafted responses
+via the OpenAI API with structured outputs, tool calling, and LangChain. Fine-tuned
+GPT-3.5 on a proprietary dataset and implemented advanced RAG using Pinecone.
+
+### Iabsis SARL - AI and Full-Stack Engineer, Web3 to AI Engineering (Remote), Jan 2023 - Mar 2026
+- SerenGPT: agentic toolkit for job and candidate matching (CV generation, job matching engine, AI interview coach, AI recruiter analysis) orchestrated with LangGraph and the Google Agent Development Kit over Postgres with vector search, with LLM eval suites against scored test sets.
+- Pollenn: biodiversity monitoring platform with AI insect recognition, Elasticsearch-backed search, and real-time geospatial map sync over WMS/WFS.
+- Web3/DeFi: Airdrop.com, Alt.co, and Sezame Wallet, built with Ethers.js and Web3.js.
+
+### TruckinDigital - Senior Full-Stack Web Engineer, Apr 2022 - Jul 2023
+Trucking fleet management platform for US carriers built from scratch, with real-time
+shipment tracking and fleet mapping via Trimble Maps, dispatcher-driver messaging over
+WebSockets at sub-second latency, and Plaid and Stripe billing.
+
+### inKin Inc - Front-End Team Lead, Jun 2019 - Apr 2022
+Led a cross-functional frontend team on a global corporate fitness platform scaled to
+hundreds of thousands of active users. Established architecture standards, shared
+component libraries, and code review processes; drove React Native development with
+cross-platform parity across iOS and Android.
+
+### Earlier
+Full-Stack Engineer at Iguan Systems (2018-2019, GraphQL and Apollo API design);
+Web Developer at Aparg/Cincopa (2017-2018); Junior Web Developer at IT-Talents (2016-2017).
+
+## Awards
+
+- Codegeist 2024, Winner: FlowSense - Intelligent Flowboards for Jira. AI-powered collaboration tool for the Atlassian ecosystem generating user journey maps, wireframe specs, user stories, and pain-point analyses, with a Rovo agent wiring insights into Jira workflows via Atlassian Forge.
+
+## Indie projects
+
+- [Meloman](https://playmeloman.app): music quiz on the App Store, Google Play, and as a Telegram Mini App. AI source separation for Instrumental Mode, real-time multiplayer Duels over WebSockets, StoreKit and Telegram payment flows, long-running bots with reconnection and state recovery.
+- Localingo: offline translator and peer-to-peer chat running translation models entirely on device via Google ML Kit.
+- Trakio: personal and small-business finance tracker with recurring transactions and subscription billing.
+- MusicDrop: audio library management app.
