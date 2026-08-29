@@ -5,6 +5,7 @@ import trakioImg from '../../assets/images/trakio.png';
 import melomanImg from '../../assets/images/meloman.png';
 import localingoImg from '../../assets/images/localingo.png';
 import musicdropImg from '../../assets/images/musicdrop.png';
+import melomusicImg from '../../assets/images/melomusic.png';
 import appStoreBadge from '../../assets/images/download_on_the_app_store.svg';
 import telegramBadge from '../../assets/images/open_in_telegram.svg';
 import playStoreBadge from '../../assets/images/get_It_on_google_play.svg';
@@ -56,6 +57,16 @@ const myApps = [
     appStore:
       'https://apps.apple.com/us/app/meloman-music-quiz-challenge/id6759525943',
     playStore: 'https://play.google.com/store/apps/details?id=com.meloman',
+  },
+  {
+    name: 'MeloMusic',
+    tagline: 'Music & Playlists',
+    description:
+      'Offline music player and library manager on the App Store, built on React Native 0.86 with the New Architecture. Downloads and stores tracks locally for playback with background audio and lock-screen controls, imports from Dropbox over OAuth with PKCE, and organises everything into playlists with ID3 metadata and artwork parsing. Ships in English, Russian, and Armenian with light, dark, and system themes.',
+    icon: melomusicImg,
+    iconBg: null,
+    appStore:
+      'https://apps.apple.com/us/app/melomusic-music-playlists/id6801933898',
   },
   {
     name: 'Localingo',
@@ -110,7 +121,7 @@ export function About() {
             className="space-y-5"
           >
             <p className="text-text-secondary leading-relaxed">
-              Senior product engineer with 10+ years in production systems and
+              Senior software engineer with 10+ years in production systems and
               B2B iGaming platform delivery, now building LLM automations and
               agentic systems with a strong focus on evals and RAG.
             </p>
@@ -190,7 +201,7 @@ export function About() {
                     Aram Suqiasyan
                   </h3>
                   <p className="text-brand-soft text-sm mt-1 text-balance">
-                    Senior AI Product Engineer - Agentic Systems, AI
+                    Senior AI Software Engineer - Agentic Systems, AI
                     Automations, LLM Evals and RAG
                   </p>
                 </div>
@@ -288,7 +299,11 @@ export function About() {
                         className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--color-n950)] bg-[var(--color-n950)] px-3 text-white"
                         style={{transformOrigin: 'center'}}
                       >
-                        <GlobeIcon size={21} weight="regular" className="shrink-0" />
+                        <GlobeIcon
+                          size={21}
+                          weight="regular"
+                          className="shrink-0"
+                        />
                         <span className="flex flex-col leading-none text-left">
                           <span className="text-[8px] tracking-[0.08em] uppercase opacity-70">
                             Visit

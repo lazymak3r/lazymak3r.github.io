@@ -1,7 +1,6 @@
 import {motion} from 'framer-motion';
 import {CaretDownIcon} from '@phosphor-icons/react';
 
-
 export function ScrollIndicator() {
   return (
     <motion.a

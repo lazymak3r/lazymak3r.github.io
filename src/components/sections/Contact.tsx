@@ -1,7 +1,13 @@
 import {motion} from 'framer-motion';
 
 import {SectionWrapper} from '../ui/SectionWrapper';
-import {EnvelopeSimpleIcon, GithubLogoIcon, LinkedinLogoIcon, TelegramLogoIcon, XLogoIcon} from '@phosphor-icons/react';
+import {
+  EnvelopeSimpleIcon,
+  GithubLogoIcon,
+  LinkedinLogoIcon,
+  TelegramLogoIcon,
+  XLogoIcon,
+} from '@phosphor-icons/react';
 
 const socialLinks = [
   {

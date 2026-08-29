@@ -70,7 +70,11 @@ export const skills: Skill[] = [
     category: 'AI & LLM Engineering',
   },
 
-  {id: 40, name: 'LLM-as-Judge', category: 'Evaluation, Safety & Observability'},
+  {
+    id: 40,
+    name: 'LLM-as-Judge',
+    category: 'Evaluation, Safety & Observability',
+  },
   {
     id: 41,
     name: 'Scoring Rubrics',
@@ -180,7 +184,11 @@ export const skills: Skill[] = [
     category: 'Backend & Reliability',
   },
   {id: 93, name: 'Idempotency', category: 'Backend & Reliability'},
-  {id: 94, name: 'Retry & Fallback Handling', category: 'Backend & Reliability'},
+  {
+    id: 94,
+    name: 'Retry & Fallback Handling',
+    category: 'Backend & Reliability',
+  },
   {
     id: 95,
     name: 'Rate-Limit Handling & Exponential Backoff',

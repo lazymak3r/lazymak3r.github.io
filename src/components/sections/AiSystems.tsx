@@ -11,12 +11,13 @@ export function AiSystems() {
             AI Engineering
           </p>
           <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary text-balance">
-            Agentic Systems, <span className="gradient-brand-text">Measured</span>
+            Agentic Systems,{' '}
+            <span className="gradient-brand-text">Measured</span>
           </h2>
           <p className="mt-4 text-text-secondary text-sm max-w-2xl mx-auto">
-            Generation-to-QA-to-publish workflows that run unattended at volume -
-            built on frontier models, with the evaluation and reliability layer
-            underneath.
+            Generation-to-QA-to-publish workflows that run unattended at volume
+            - built on frontier models, with the evaluation and reliability
+            layer underneath.
           </p>
         </div>
 

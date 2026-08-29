@@ -41,7 +41,11 @@ export const aiSystems: AiSystem[] = [
     title: 'RAG & Hybrid Retrieval',
     description:
       'Retrieval built on pgvector, Pinecone, LanceDB, and Chroma, combining dense embeddings with BM25 for hybrid ranking. Vector search over Postgres backing agent toolkits, so retrieval and relational state live in one queryable system rather than drifting apart.',
-    badges: ['pgvector & Pinecone', 'BM25 hybrid ranking', 'Vector + relational'],
+    badges: [
+      'pgvector & Pinecone',
+      'BM25 hybrid ranking',
+      'Vector + relational',
+    ],
   },
   {
     color: brand.vivid,
@@ -49,7 +53,11 @@ export const aiSystems: AiSystem[] = [
     title: 'Guardrails, PII & Compliance',
     description:
       'Brand-safety, fact-verification, and SEO checks with structured-output validation before anything reaches a human approval gate - failed checks route back for regeneration rather than blocking the run. PII masked and tokenized before it reaches any model, so downstream services and analytics operate on tokenized references.',
-    badges: ['Schema validation', 'PII masking & tokenization', 'Fact verification'],
+    badges: [
+      'Schema validation',
+      'PII masking & tokenization',
+      'Fact verification',
+    ],
   },
   {
     color: brand.deep,
@@ -65,6 +73,10 @@ export const aiSystems: AiSystem[] = [
     title: 'Local & Fine-Tuned Models',
     description:
       'Open-weight models deployed locally with Ollama and on HuggingFace, fine-tuned with Tinker, plus in-browser inference running with zero external API calls. Local inference chosen deliberately where cost, latency, or data residency makes it the better trade-off than a hosted API.',
-    badges: ['Ollama & HuggingFace', 'Zero-egress inference', 'Cost & latency control'],
+    badges: [
+      'Ollama & HuggingFace',
+      'Zero-egress inference',
+      'Cost & latency control',
+    ],
   },
 ];

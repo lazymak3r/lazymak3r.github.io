@@ -55,7 +55,7 @@ export const experiences: Experience[] = [
   {
     id: 2,
     company: 'CAIAT.US',
-    role: 'Principal AI Product Engineer, Contract',
+    role: 'Principal AI Software Engineer, Contract',
     period: 'June 2024 - Present',
     type: 'contract',
     description: 'Delivery engineer across client AI platform engagements.',
@@ -124,7 +124,7 @@ export const experiences: Experience[] = [
   {
     id: 3,
     company: 'brandwise.ai',
-    role: 'Founding AI Product Engineer - Remote',
+    role: 'Founding AI Software Engineer - Remote',
     period: 'Aug 2023 - May 2024',
     type: 'full-time',
     description:
@@ -219,7 +219,14 @@ export const experiences: Experience[] = [
     type: 'full-time',
     description:
       'Led a cross-functional frontend team building a global corporate fitness and wellness platform that scaled to hundreds of thousands of active users. Established frontend architecture standards, shared component libraries, and code review processes that measurably reduced regression rates and shortened onboarding for new engineers. Drove React Native mobile development alongside the web product, delivering cross-platform feature parity across iOS and Android, and partnered directly with product managers and designers to translate UX requirements into performant, accessible implementations.',
-    technologies: ['React', 'React Native', 'Redux', 'TypeScript', 'iOS', 'Android'],
+    technologies: [
+      'React',
+      'React Native',
+      'Redux',
+      'TypeScript',
+      'iOS',
+      'Android',
+    ],
     projects: [
       {
         name: 'inKin Mobile App',

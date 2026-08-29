@@ -8,8 +8,10 @@ import {springSnappy} from '../../lib/motion';
 import type {Project} from '../../data/experience';
 import {ArrowSquareOutIcon} from '@phosphor-icons/react';
 
-interface ProjectCardProps
-  extends Pick<Project, 'url' | 'appStore' | 'playStore' | 'telegram'> {
+interface ProjectCardProps extends Pick<
+  Project,
+  'url' | 'appStore' | 'playStore' | 'telegram'
+> {
   name: string;
   blurb?: string;
   company: string;

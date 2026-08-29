@@ -1,5 +1,9 @@
-
-import {GithubLogoIcon, LinkedinLogoIcon, TelegramLogoIcon, XLogoIcon} from '@phosphor-icons/react';
+import {
+  GithubLogoIcon,
+  LinkedinLogoIcon,
+  TelegramLogoIcon,
+  XLogoIcon,
+} from '@phosphor-icons/react';
 const socialLinks = [
   {
     label: 'GitHub',
@@ -33,7 +37,8 @@ export function Footer() {
               Aram Suqiasyan
             </p>
             <p className="text-text-muted text-sm">
-              Senior AI Product Engineer - Agentic Systems, AI Automations, LLM Evals and RAG
+              Senior AI Software Engineer - Agentic Systems, AI Automations, LLM
+              Evals and RAG
             </p>
           </div>
 

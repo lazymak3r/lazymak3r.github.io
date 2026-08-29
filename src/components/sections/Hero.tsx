@@ -87,7 +87,7 @@ export function Hero() {
               <span className="text-text-primary font-medium">
                 Aram Suqiasyan
               </span>
-              , a senior product engineer with 10+ years in production systems
+              , a senior software engineer with 10+ years in production systems
               and B2B iGaming delivery, now building LLM automations and agentic
               systems with a strong focus on evals and RAG - provider-native
               SDKs, custom MCP integrations, runtime fallback, and per-run cost

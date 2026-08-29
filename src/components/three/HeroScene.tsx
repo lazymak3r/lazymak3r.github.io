@@ -41,7 +41,11 @@ export function HeroScene({mousePos}: HeroSceneProps) {
     >
       <ambientLight intensity={0.9} />
       <directionalLight position={[4, 6, 6]} intensity={2.2} color={ui.white} />
-      <directionalLight position={[-6, 2, 4]} intensity={1.1} color={ui.white} />
+      <directionalLight
+        position={[-6, 2, 4]}
+        intensity={1.1}
+        color={ui.white}
+      />
       <pointLight position={[-3, 1.5, 3]} intensity={5} color={brand.base} />
       <pointLight position={[3, -2, 2]} intensity={3} color={brand.faint} />
 

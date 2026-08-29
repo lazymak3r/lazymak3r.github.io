@@ -24,7 +24,12 @@ export const springMomentum: Transition = {
   duration: 0.4,
 };
 
-export const easeStandard = [0.16, 1, 0.3, 1] as [number, number, number, number];
+export const easeStandard = [0.16, 1, 0.3, 1] as [
+  number,
+  number,
+  number,
+  number,
+];
 
 export function projectMomentum(
   initialVelocity: number,
