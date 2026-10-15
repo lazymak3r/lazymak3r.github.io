@@ -22,7 +22,7 @@ const socialLinks = [
   },
   {
     label: 'Twitter / X',
-    href: 'https://twitter.com/AramSuqiasyan97',
+    href: 'https://twitter.com/AramSukiasyan97',
     icon: <XLogoIcon weight="fill" className="w-6 h-6" />,
   },
   {
