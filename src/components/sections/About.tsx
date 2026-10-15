@@ -3,6 +3,7 @@ import {motion} from 'framer-motion';
 import portraitImg from '../../assets/images/aram.jpg';
 import trakioImg from '../../assets/images/trakio.png';
 import melomanImg from '../../assets/images/meloman.png';
+import spectexImg from '../../assets/images/spectex.png';
 import localingoImg from '../../assets/images/localingo.png';
 import musicdropImg from '../../assets/images/musicdrop.png';
 import melomusicImg from '../../assets/images/melomusic.png';
@@ -45,6 +46,15 @@ const highlights = [
 ];
 
 const myApps = [
+  {
+    name: 'SPECTEX',
+    tagline: 'Construction Equipment Marketplace',
+    description:
+      'Marketplace for renting and buying construction equipment across Yerevan and every region of Armenia. Owners list excavators, cranes, loaders, and tippers for free with no commission, and renters contact them directly, with hourly, daily, and monthly prices. Server-rendered Next.js frontend with on-demand revalidation, a NestJS and Prisma backend, and a separate React admin panel, all on Vercel. Ships in Armenian, Russian, and English, with Twilio phone OTP, Google sign-in, Cloudflare R2 image uploads, IndexNow for fast search indexing, and a partner and advertising program for equipment businesses.',
+    icon: spectexImg,
+    iconBg: null,
+    url: 'https://www.spectex.am',
+  },
   {
     name: 'Meloman',
     tagline: 'Music Quiz Challenge',
@@ -193,12 +203,12 @@ export function About() {
               <div className="p-8 text-center space-y-6">
                 <img
                   src={portraitImg}
-                  alt="Aram Suqiasyan"
+                  alt="Aram Sukiasyan"
                   className="w-32 h-32 mx-auto rounded-full object-cover"
                 />
                 <div>
                   <h3 className="font-display font-bold text-xl text-text-primary">
-                    Aram Suqiasyan
+                    Aram Sukiasyan
                   </h3>
                   <p className="text-brand-soft text-sm mt-1 text-balance">
                     Senior AI Software Engineer - Agentic Systems, AI

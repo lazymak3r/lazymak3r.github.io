@@ -36,7 +36,7 @@ export function BrandText3D() {
           bevelOffset={0}
           bevelSegments={6}
         >
-          Aram Suqiasyan
+          Aram Sukiasyan
           <meshPhysicalMaterial
             color={neutral.n800}
             transparent

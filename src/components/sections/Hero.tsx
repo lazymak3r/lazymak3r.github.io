@@ -85,7 +85,7 @@ export function Hero() {
             >
               I'm{' '}
               <span className="text-text-primary font-medium">
-                Aram Suqiasyan
+                Aram Sukiasyan
               </span>
               , a senior software engineer with 10+ years in production systems
               and B2B iGaming delivery, now building LLM automations and agentic

@@ -92,7 +92,7 @@ export function Navbar() {
               href="#hero"
               className="pressable font-display font-bold text-xl gradient-brand-text"
             >
-              Aram Suqiasyan
+              Aram Sukiasyan
             </a>
 
             <ul className="hidden lg:flex items-center gap-5">

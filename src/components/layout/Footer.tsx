@@ -12,7 +12,7 @@ const socialLinks = [
   },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/aramsuqiasyan',
+    href: 'https://www.linkedin.com/in/aramsukiasyan',
     icon: <LinkedinLogoIcon weight="fill" className="w-5 h-5" />,
   },
   {
@@ -34,7 +34,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-display font-bold text-lg gradient-brand-text mb-1">
-              Aram Suqiasyan
+              Aram Sukiasyan
             </p>
             <p className="text-text-muted text-sm">
               Senior AI Software Engineer - Agentic Systems, AI Automations, LLM
@@ -58,7 +58,7 @@ export function Footer() {
           </div>
 
           <p className="text-text-muted text-sm">
-            © {new Date().getFullYear()} Aram Suqiasyan
+            © {new Date().getFullYear()} Aram Sukiasyan
           </p>
         </div>
       </div>

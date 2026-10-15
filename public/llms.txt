@@ -1,4 +1,4 @@
-# Aram Suqiasyan
+# Aram Sukiasyan
 
 > Senior AI Software Engineer - Agentic Systems, AI Automations, LLM Evals and RAG.
 > Senior software engineer with 10+ years in production systems and B2B iGaming
@@ -10,7 +10,7 @@ Based in Yerevan, Armenia (GMT+4). Open to remote work.
 - Site: https://lazymak3r.github.io/
 - Email: aramsuqiasyan20@gmail.com
 - GitHub: https://github.com/lazymak3r
-- LinkedIn: https://www.linkedin.com/in/aramsuqiasyan
+- LinkedIn: https://www.linkedin.com/in/aramsukiasyan
 - X: https://twitter.com/AramSuqiasyan97
 - Telegram: https://t.me/suqiasyan20aram
 
@@ -41,7 +41,9 @@ production.
 
 ## Experience
 
-### Spayon.io - Lead FinTech Engineer, Contract (Remote), Jan 2025 - Present
+### EPAM Systems - Senior Software Engineer, Oct 2026 - Present
+
+### Spayon.io - Lead FinTech Engineer, Contract (Remote), Jan 2025 - Aug 2026
 Lead engineer on a multi-currency payment gateway processing high-frequency
 transactions for 100+ online merchants across Central Asia, Europe, and North
 America, spanning payment, subscription, and wallet APIs, a multi-vendor admin
@@ -51,7 +53,7 @@ portal, and ARCA and MIR payment rail integrations.
 - Metabase operations dashboard covering vendor liquidity, fee revenue by deposit and withdrawal, multi-currency gateway receipts, and reserve balances.
 - PII handling: masking and tokenization of cardholder and merchant data across payment, subscription, and wallet APIs.
 
-### CAIAT.US - Principal AI Software Engineer, Contract, June 2024 - Present
+### CAIAT.US - Principal AI Software Engineer, Contract, June 2024 - Sep 2026
 Delivery engineer across client AI platform engagements.
 
 - Zetik: B2B iGaming and sportsbook platform, source-code licensed to operators. Bonus engine and abuse controls, player account management, sportsbook and in-house games, slot-provider integrations, affiliate campaigns, Fasttrack CRM, third-party fraud detection. Serving LATAM, Asia, Russia, and Middle East markets.
@@ -94,6 +96,7 @@ Web Developer at Aparg/Cincopa (2017-2018); Junior Web Developer at IT-Talents (
 
 ## Indie projects
 
+- [SPECTEX](https://www.spectex.am): construction equipment rental and sales marketplace for Armenia. Free, commission-free listings with direct owner contact; Next.js with on-demand revalidation, NestJS and Prisma backend, React admin panel, Armenian/Russian/English localization, Twilio phone OTP, Google sign-in, Cloudflare R2 uploads, IndexNow.
 - [Meloman](https://playmeloman.app): music quiz on the App Store, Google Play, and as a Telegram Mini App. AI source separation for Instrumental Mode, real-time multiplayer Duels over WebSockets, StoreKit and Telegram payment flows, long-running bots with reconnection and state recovery.
 - [MeloMusic](https://apps.apple.com/us/app/melomusic-music-playlists/id6801933898): offline music player and library manager on the App Store. React Native 0.86 New Architecture, local downloads with background audio and lock-screen controls, Dropbox import over OAuth with PKCE, playlists with ID3 metadata and artwork parsing, English/Russian/Armenian localization.
 - Localingo: offline translator and peer-to-peer chat running translation models entirely on device via Google ML Kit.

@@ -20,10 +20,20 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: 10,
+    company: 'EPAM Systems',
+    role: 'Senior Software Engineer',
+    period: 'Oct 2026 - Present',
+    type: 'full-time',
+    description: 'Senior Software Engineer at EPAM Systems.',
+    technologies: [],
+    projects: [],
+  },
+  {
     id: 1,
     company: 'Spayon.io',
     role: 'Lead FinTech Engineer, Contract - Remote',
-    period: 'Jan 2025 - Present',
+    period: 'Jan 2025 - Aug 2026',
     type: 'contract',
     description:
       'Lead engineer on a multi-currency payment gateway processing high-frequency transactions for 100+ online merchants across Central Asia, Europe, and North America, spanning payment, subscription, and wallet APIs, a multi-vendor admin portal, and ARCA and MIR payment rail integrations.',
@@ -56,7 +66,7 @@ export const experiences: Experience[] = [
     id: 2,
     company: 'CAIAT.US',
     role: 'Principal AI Software Engineer, Contract',
-    period: 'June 2024 - Present',
+    period: 'June 2024 - Sep 2026',
     type: 'contract',
     description: 'Delivery engineer across client AI platform engagements.',
     technologies: [
